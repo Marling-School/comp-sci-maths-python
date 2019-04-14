@@ -1,5 +1,13 @@
-myName = 'Joe'
+myName = "Joe"
+
+# These two lines are equivalent
+print("Hello " + myName)
+print("Hello {}".format(myName))
+
 mySecondInitial = 'S'
+
+myAge = 35
+print("I am {:04d} years old".format(myAge))
 
 print('My name is {} of type {}'.format(myName, type(myName)))
 print('My Second Initial is {} of type {}'.format(mySecondInitial, type(mySecondInitial)))

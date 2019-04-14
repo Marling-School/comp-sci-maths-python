@@ -10,6 +10,15 @@ if somethingFalse:
 if not somethingFalse:
     print('Something false was not true...goodo') # Should print
 
+print("Starting Counting")
+count = 0
+
+while count < 5:
+    print("Counting {}".format(count))
+    count += 1
+
+print("Finished Counting")
+
 aNumberAsBool = 0
 anotherNumberAsBool = 5
 

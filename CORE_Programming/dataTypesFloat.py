@@ -1,3 +1,10 @@
+import math
+
+myNum = 5
+mySquareRoot = math.sqrt(myNum)
+
+print('Square Root of {} is {}'.format(myNum, mySquareRoot))
+
 myX = 0.3
 myY = 8.345
 myZ = -45.4
