@@ -5,7 +5,7 @@ from typing import List
 class RegularPolygon(ABC):
 
     def __init__(self, name: str, side_length: int):
-        self.name = name
+        self.__name = name
         self.side_length = side_length
 
     @abstractmethod
@@ -13,7 +13,7 @@ class RegularPolygon(ABC):
         pass
 
     def to_string(self):
-        return "Shape: {}, side length: {}, area: {}".format(self.name, self.side_length, self.get_area())
+        return "Shape: {}, side length: {}, area: {}".format(self.__name, self.side_length, self.get_area())
 
 
 class Triangle(RegularPolygon):
