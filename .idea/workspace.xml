@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8e5b654-550c-4641-999e-7358b398752f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CORE_Programming/concepts3/recursiveTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Programming/concepts3/recursiveTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_Programming/paradigms/classesShapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Programming/paradigms/classesShapes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_Programming/concepts3/basicMaths.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_Programming/concepts3/mathLib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_Programming/objectOriented/animals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/musicNoteFrequency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VidLearn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VidLearn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,24 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CORE_Programming/paradigms/classesShapes.py">
+        <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts3/mathLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts3/recursiveTree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="391">
+              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -81,13 +74,16 @@
         <option value="$PROJECT_DIR$/CORE_Programming/paradigms/FirstClass.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/concepts3/recursiveTree.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/paradigms/classesShapes.py" />
+        <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/musicNoteFrequency.py" />
+        <option value="$PROJECT_DIR$/CORE_Programming/objectOriented/animals.py" />
+        <option value="$PROJECT_DIR$/CORE_Programming/concepts3/basicMaths.py" />
+        <option value="$PROJECT_DIR$/CORE_Programming/concepts3/mathLib.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1303" />
-    <option name="y" value="17" />
-    <option name="width" value="1244" />
+    <option name="x" value="-7" />
+    <option name="width" value="1302" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -117,18 +113,6 @@
               <item name="CORE_Programming" type="462c0819:PsiDirectoryNode" />
               <item name="concepts3" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_Programming" type="462c0819:PsiDirectoryNode" />
-              <item name="concepts4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_Programming" type="462c0819:PsiDirectoryNode" />
-              <item name="paradigms" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -137,7 +121,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -159,7 +143,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.classesShapes">
+  <component name="RunManager" selected="Python.mathLib">
+    <configuration name="animals" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="VidLearn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/objectOriented" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/objectOriented/animals.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="basicMaths" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="VidLearn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts3/basicMaths.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="classesShapes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -181,7 +207,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="factorial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mathLib" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,32 +215,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts4/factorial.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="fibonacci" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VidLearn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts4/fibonacci.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts3/mathLib.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -244,34 +249,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="subroutines" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VidLearn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts2/subroutines.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mathLib" />
+        <item itemvalue="Python.basicMaths" />
+        <item itemvalue="Python.animals" />
         <item itemvalue="Python.classesShapes" />
         <item itemvalue="Python.recursiveTree" />
-        <item itemvalue="Python.factorial" />
-        <item itemvalue="Python.fibonacci" />
-        <item itemvalue="Python.subroutines" />
       </list>
     </recent_temporary>
   </component>
@@ -289,10 +273,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1303" y="17" width="1244" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1302" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23548922" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22468354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -457,13 +441,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/turtle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64396">
-          <caret line="3797" column="12" selection-start-line="3797" selection-start-column="6" selection-end-line="3797" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/turtle.py" />
     <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/lordOfRingsName.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -501,17 +479,45 @@
     <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts3/recursiveTree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/musicNoteFrequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_Programming/paradigms/classesShapes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        <state>
+          <caret selection-end-line="1" selection-end-column="23" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/objectOriented/animals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts3/basicMaths.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts3/mathLib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
         </state>
       </provider>
     </entry>
