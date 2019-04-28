@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8e5b654-550c-4641-999e-7358b398752f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines2_major_scales.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/variable_scope.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines2_major_scales.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines2_major_scales.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +17,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines2_major_scales.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="323">
+              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/variable_scope.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -86,6 +95,7 @@
         <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/type_casting.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/date_time_demo.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines.py" />
+        <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/variable_scope.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines2_major_scales.py" />
       </list>
     </option>
@@ -174,27 +184,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ordinal_char_conversion" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VidLearn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/ordinal_char_conversion.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="subroutines" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,13 +247,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="variable_scope" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="VidLearn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/variable_scope.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.subroutines2_major_scales" />
+        <item itemvalue="Python.variable_scope" />
         <item itemvalue="Python.subroutines" />
         <item itemvalue="Python.date_time_demo" />
         <item itemvalue="Python.type_casting" />
-        <item itemvalue="Python.ordinal_char_conversion" />
       </list>
     </recent_temporary>
   </component>
@@ -623,10 +633,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/variable_scope.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/subroutines2_major_scales.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="323">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
