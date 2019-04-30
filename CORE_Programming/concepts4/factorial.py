@@ -1,4 +1,4 @@
-from concepts4.utils.utils import check_number
+from CORE_Programming.concepts4.utils.utils import check_number
 
 
 def factorial(the_number: int) -> int:
