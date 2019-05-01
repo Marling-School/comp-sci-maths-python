@@ -18,3 +18,4 @@ if user_number is not None and user_number > 0:
     print("Calculating Fibonacci Number {} = {}".format(user_number, fib))
 else:
     print("Your selection was invalid '{}'".format(user_num_as_str))
+

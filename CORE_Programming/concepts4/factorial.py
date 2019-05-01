@@ -16,3 +16,4 @@ if user_number is not None and user_number > 0:
     print("{}! = {}".format(user_number, fact))
 else:
     print("Invalid Input '{}'".format(user_num_as_str))
+
