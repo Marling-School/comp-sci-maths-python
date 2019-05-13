@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8e5b654-550c-4641-999e-7358b398752f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CORE_Programming/concepts4/recurseForever.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Faith/counting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_Programming/concepts4/factorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Programming/concepts4/factorial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_Programming/concepts4/fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Programming/concepts4/fibonacci.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_Programming/concepts4/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Programming/concepts4/utils/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +14,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py">
+        <entry file="file://$PROJECT_DIR$/Faith/counting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state relative-caret-position="85">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -41,7 +37,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CORE_Programming/data_type_demo.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/dataTypesWholeNumbers.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/dataTypesInteger.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/dataTypesMath.py" />
@@ -92,14 +87,15 @@
         <option value="$PROJECT_DIR$/CORE_Programming/concepts4/fibonacci.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/concepts4/utils/utils.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py" />
+        <option value="$PROJECT_DIR$/Faith/counting.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1193" />
-    <option name="y" value="14" />
-    <option name="width" value="1294" />
-    <option name="height" value="1047" />
+    <option name="x" value="1281" />
+    <option name="y" value="61" />
+    <option name="width" value="1183" />
+    <option name="height" value="982" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -125,15 +121,7 @@
             <path>
               <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_Programming" type="462c0819:PsiDirectoryNode" />
-              <item name="concepts4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_Programming" type="462c0819:PsiDirectoryNode" />
-              <item name="concepts4" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Faith" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,8 +153,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.highest_common_factor">
-    <configuration name="coinFlip" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.counting">
+    <configuration name="counting" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -174,11 +162,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Faith" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts4/coinFlip.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Faith/counting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.counting" />
         <item itemvalue="Python.highest_common_factor" />
         <item itemvalue="Python.recurseForever" />
         <item itemvalue="Python.factorial" />
         <item itemvalue="Python.fibonacci" />
-        <item itemvalue="Python.coinFlip" />
       </list>
     </recent_temporary>
   </component>
@@ -295,21 +283,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1193" y="14" width="1294" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="1281" y="61" width="1183" height="982" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22611465" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24803494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3358862" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35100117" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21225382" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.22850412" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -665,8 +652,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Faith/counting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
     </entry>
