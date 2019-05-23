@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8e5b654-550c-4641-999e-7358b398752f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception_no_handling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/Stack/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,21 +15,54 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception.py">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="33" />
+            <state>
+              <caret selection-end-line="2" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="35" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception_no_handling.py">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="442">
+              <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -40,19 +76,24 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>myQueue</find>
+      <find>my_queue</find>
+      <find>dequeue</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>my_queue</replace>
+      <replace>my_stack</replace>
+      <replace>pop</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CORE_Programming/dataTypesLists.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/dataTypesDictionary.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/dataTypesBoolean.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/dataTypesText.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/concepts2/variablesDice.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/concepts2/constantsMultiple.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/concepts2/variableRoles.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/concepts2/selectionDemo.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/concepts2/repetitionDemo.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/concepts2/indefiniteIteration.py" />
@@ -97,12 +138,19 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception_no_handling.py" />
+        <option value="$PROJECT_DIR$/CORE_Programming/scratch.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/circularQueue.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/circularQueue.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Stack/test.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1281" />
-    <option name="y" value="61" />
+    <option name="x" value="1088" />
+    <option name="y" value="56" />
     <option name="width" value="1183" />
     <option name="height" value="982" />
   </component>
@@ -124,13 +172,30 @@
             <path>
               <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="CORE_DataStructures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="CORE_DataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="CircularQueue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="CORE_DataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
               <item name="CORE_Programming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
               <item name="CORE_Programming" type="462c0819:PsiDirectoryNode" />
-              <item name="practicalProgramming1" type="462c0819:PsiDirectoryNode" />
+              <item name="concepts4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
@@ -146,18 +211,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CORE_Programming/concepts2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CORE_DataStructures/Stack" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_Programming\concepts2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_DataStructures\CircularQueue" />
       <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_Programming\concepts4\utils" />
       <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_Programming\concepts4" />
       <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_Programming\concepts1" />
       <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_Programming" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_DataStructures\Stack" />
+      <recent name="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_Programming\concepts2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -172,8 +239,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.most_basic_exception_no_handling">
-    <configuration name="counting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_stack">
+    <configuration name="circularQueue" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -181,11 +248,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Faith" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Faith/counting.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Joe Sharp\PycharmProjects\VidLearn\CORE_DataStructures\CircularQueue\CircularQueue.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,7 +261,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="most_basic_exception" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -202,11 +269,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/scratch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -215,76 +282,55 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="most_basic_exception_no_handling" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for test.TestStringMethods.test_circular_queue" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception_no_handling.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestStringMethods.test_circular_queue&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="truthTables" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for test.TestStringMethods.test_stack" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Stack" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts3/truthTables.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestStringMethods.test_stack&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="truthTablesSimple" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests in test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Programming/concepts3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Stack" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_Programming/concepts3/truthTablesSimple.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/CORE_DataStructures/Stack/test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.most_basic_exception_no_handling" />
-        <item itemvalue="Python.most_basic_exception" />
-        <item itemvalue="Python.truthTables" />
-        <item itemvalue="Python.truthTablesSimple" />
-        <item itemvalue="Python.counting" />
+        <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_stack" />
+        <item itemvalue="Python tests.Unittests in test.py" />
+        <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue" />
+        <item itemvalue="Python.circularQueue" />
+        <item itemvalue="Python.scratch" />
       </list>
     </recent_temporary>
   </component>
@@ -301,17 +347,25 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_TestStringMethods_test_circular_queue - 2019.05.23 at 22h 51m 28s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_circular_queue" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_py - 2019.05.23 at 22h 59m 22s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1281" y="61" width="1183" height="982" extended-state="0" />
+    <frame x="1088" y="56" width="1183" height="982" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24803494" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24803494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.35100117" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.35100117" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39929327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -325,44 +379,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts1/dataTypesDateTime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts1/dataTypesBoolean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts1/dataTypesFloat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts1/dataTypesText.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts1/dataTypesDictionary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts2/variableRoles.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -388,13 +404,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/turtle.py" />
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/lordOfRingsName.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="96" selection-start-column="96" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts3/recursiveTree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -433,13 +442,6 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -529,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -678,7 +673,63 @@
     <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/most_basic_exception_no_handling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/scratch.py" />
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/lordOfRingsName.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="96" selection-start-column="96" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="35" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
