@@ -1,4 +1,5 @@
 from typing import Set, Dict, List, Callable, Tuple, TypeVar, Generic
+from functools import reduce
 
 T = TypeVar('T', str, int)
 
@@ -29,7 +30,8 @@ class WeightedGraph(Generic[T]):
 
         return self.__data[from_v]
 
-    def genrate_adjacency_matrix(self, to_index: Callable[[T], int]) -> List[List[T]]:
+    def generate_adjacency_matrix(self, to_index: Callable[[T], int]) -> List[List[T]]:
+
         pass
         return [[]]
 

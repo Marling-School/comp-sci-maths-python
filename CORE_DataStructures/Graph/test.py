@@ -11,5 +11,5 @@ class TestStringMethods(unittest.TestCase):
         my_graph.add_relationship('T', 'I', 7)
         print("My Graph:{}".format(my_graph))
         my_graph.print_adj_list()
-        my_adj_matrix = my_graph.genrate_adjacency_matrix()
+        my_adj_matrix = my_graph.generate_adjacency_matrix(ord)
         print("Adjacency Matrix", my_adj_matrix)
