@@ -6,6 +6,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_stack(self):
         my_stack: Stack[int] = Stack(5)
+        is_empty_at_start: bool = my_stack.is_empty()
         my_stack.push(5)
         my_stack.push(7)
         my_stack.push(10)
@@ -25,6 +26,7 @@ class TestStringMethods(unittest.TestCase):
         g = my_stack.pop()
         h = my_stack.pop()
 
+        self.assertTrue(is_empty_at_start)
         self.assertEqual(a, 10)
         self.assertEqual(b, 54)
         self.assertEqual(c, 2)
