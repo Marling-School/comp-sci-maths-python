@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02bbe72e-4e25-4724-8269-6a145c1671b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/Array/arrayDemo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/Files/Person.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/Files/add_person_csv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/Stack/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/Stack/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,24 +13,108 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Files/add_person_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Array/arrayDemo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Files/Person.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -62,9 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CORE_Programming/concepts4/utils/__init__.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/paradigms/FirstClass.py" />
-        <option value="$PROJECT_DIR$/CORE_Programming/concepts3/recursiveTree.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/paradigms/classesShapes.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/practicalProgramming1/musicNoteFrequency.py" />
         <option value="$PROJECT_DIR$/CORE_Programming/objectOriented/animals.py" />
@@ -113,6 +194,9 @@
         <option value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Array/arrayDemo.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Stack/test.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Files/Person.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Files/write_person_csv.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Files/add_person_csv.py" />
       </list>
     </option>
   </component>
@@ -130,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +249,12 @@
               <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
               <item name="CORE_DataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="Files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
+              <item name="CORE_DataStructures" type="462c0819:PsiDirectoryNode" />
               <item name="Graph" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -192,7 +283,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,7 +315,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_stack">
+  <component name="RunManager" selected="Python.add_person_csv">
+    <configuration name="add_person_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="VidLearn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Files" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_DataStructures/Files/add_person_csv.py" />
+      <option name="PARAMETERS" value="&quot;C:\Users\Joe Sharp\Desktop\people.csv&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="arrayDemo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,27 +350,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_DataStructures/Array/arrayDemo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="foo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VidLearn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Graph" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_DataStructures/Graph/foo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -282,6 +372,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for test.TestStringMethods.test_circular_queue" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="VidLearn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestStringMethods.test_circular_queue&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for test.TestStringMethods.test_stack" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -296,41 +400,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="VidLearn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Stack" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/CORE_DataStructures/Stack/test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="VidLearn_Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Graph" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/CORE_DataStructures/Graph/test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.add_person_csv" />
+      <item itemvalue="Python.arrayDemo" />
+      <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph" />
+      <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue" />
+      <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_stack" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.add_person_csv" />
+        <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_stack" />
         <item itemvalue="Python.arrayDemo" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph" />
-        <item itemvalue="Python.foo" />
-        <item itemvalue="Python tests.Unittests in test.py" />
       </list>
     </recent_temporary>
   </component>
@@ -348,12 +431,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.25 at 23h 54m 12s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.25 at 23h 55m 30s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.25 at 23h 58m 46s.xml">
       <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
@@ -378,6 +455,12 @@
     <history-entry file="Unittests_for_test_TestStringMethods_test_stack - 2019.05.26 at 22h 02m 39s.xml">
       <configuration name="Unittests for test.TestStringMethods.test_stack" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_test_stack - 2019.05.26 at 22h 03m 44s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_stack" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_test_circular_queue - 2019.05.26 at 22h 38m 56s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_circular_queue" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="684" y="42" width="1183" height="982" extended-state="0" />
@@ -388,13 +471,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286219" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.14840989" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.3133098" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39929327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49868995" weight="0.22850412" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49868995" weight="0.05064782" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50131005" side_tool="true" weight="0.35100117" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -403,20 +486,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/string_concatenation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/string_slice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_Programming/practicalProgramming1/ordinal_char_conversion.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -648,27 +717,10 @@
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/469259909/_functools.py" />
     <entry file="file://$USER_HOME$/.conda/envs/VidLearn_Python/lib/python3.7/typing.py" />
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/foo.py" />
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="23" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -682,27 +734,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="28" />
+        <state relative-caret-position="357">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="595">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="70" column="20" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+        <state relative-caret-position="442">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Files/Person.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
@@ -716,19 +795,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="17">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Files/add_person_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
