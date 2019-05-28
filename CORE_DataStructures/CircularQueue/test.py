@@ -33,7 +33,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(f, 2)
         self.assertEqual(g, 6)
         self.assertEqual(h, 19)
-        print("Tested Stack {}".format(my_queue))
+        print("Tested Circular Queue {}".format(my_queue))
 
 
 if __name__ == '__main__':
