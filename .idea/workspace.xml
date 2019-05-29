@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02bbe72e-4e25-4724-8269-6a145c1671b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/Graph/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/Graph/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +35,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="544">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -121,12 +155,9 @@
         <option value="$PROJECT_DIR$/CORE_DataStructures/circularQueue.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/circularQueue.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py" />
-        <option value="$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/AdjListGraph.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/foo.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Tree/BinaryTree.py" />
-        <option value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py" />
-        <option value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Array/arrayDemo.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Stack/test.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Files/write_person_csv.py" />
@@ -140,12 +171,15 @@
         <option value="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/test.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="478" />
-    <option name="y" value="44" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="376" />
+    <option name="y" value="40" />
     <option name="width" value="1183" />
     <option name="height" value="982" />
   </component>
@@ -186,12 +220,6 @@
               <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
               <item name="CORE_DataStructures" type="462c0819:PsiDirectoryNode" />
               <item name="CircularQueue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_DataStructures" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
@@ -266,26 +294,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph">
-    <configuration name="multiDimensional" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph (1)">
+    <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Array" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_DataStructures/Array/multiDimensional.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestStringMethods.test_adj_list_graph&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -345,19 +366,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.multiDimensional" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue (1)" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_linked_list" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_priority_queue" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph" />
+      <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph (1)" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_priority_queue" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_linked_list" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue (1)" />
-        <item itemvalue="Python.multiDimensional" />
       </list>
     </recent_temporary>
   </component>
@@ -375,21 +396,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 33m 45s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 34m 28s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 35m 25s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 37m 45s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 42m 30s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 42m 51s.xml">
       <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
@@ -405,23 +411,38 @@
     <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 46m 59s.xml">
       <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 51m 04s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 15h 02m 14s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph_(1) - 2019.05.29 at 15h 02m 16s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph_(1) - 2019.05.29 at 15h 19m 50s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph_(1) - 2019.05.29 at 15h 19m 54s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph (1)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <frame x="376" y="40" width="1183" height="982" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11189913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24803494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286219" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.22860238" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.3262662" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39929327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49868995" weight="0.26002166" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49868995" weight="0.2591284" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50131005" side_tool="true" weight="0.35100117" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -632,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -646,13 +660,6 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -684,16 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="34" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,10 +767,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

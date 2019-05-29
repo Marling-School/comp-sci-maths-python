@@ -8,7 +8,7 @@ class Stack(Generic[T]):
     data: List[T or None]
     top: int
 
-    def __init__(self, capacity: int):
+    def __init__(self, capacity: int = 1000):
         self.capacity = capacity
         self.data = [None] * capacity
         self.top = 0

@@ -36,7 +36,8 @@ class BinaryTree(Generic[T]):
 
 
 class Traverse(Generic[T]):
-    __name: str;
+    __name: str
+    __tree: BinaryTree[T]
 
     def __init__(self, name: str):
         self.__name = name
