@@ -1,48 +1,34 @@
 from typing import Tuple, List, TypeVar, Generic
+from CORE_DataStructures.LinkedList.LinkedList import LinkedList
 
 T = TypeVar('T')
 
 
 class PriorityQueue(Generic[T]):
-    capacity: int
-    data: List[Tuple[T, int] or None]
-    front_pointer: int
-    rear_pointer: int
-    size: int
+    __items: LinkedList[Tuple[T, int]]
 
-    def __init__(self, capacity: int):
-        self.capacity = capacity
-        self.data = [None]*capacity
-        self.front_pointer = 0
-        self.rear_pointer = 0
-        self.size = 0
+    def __init__(self):
+        self.__items = LinkedList()
 
-    def __str__(self):
-        return "{}".format(self.data)
-
-    def is_full(self):
-        return self.size == self.capacity
+    def __repr__(self):
+        return "{}".format(self.__items)
 
     def is_empty(self):
-        return self.size == 0
+        return self.__items.is_empty()
 
     def enqueue(self, item: T, priority: int):
-        if self.is_full():
-            raise Exception('Queue Full')
+        for prioritisedItem, index in self.__items:
+            if priority > prioritisedItem[1]:
+                self.__items.insert((item, priority), index)
+                return
+        self.__items.append((item, priority))
 
-        self.data[self.rear_pointer] = (item, priority)
-        self.rear_pointer += 1
-        self.rear_pointer %= self.capacity
-        self.size += 1
-
-    def dequeue(self) -> (T, int):
+    def dequeue(self) -> Tuple[T, int] or None:
         if self.is_empty():
             raise Exception('Queue Empty')
 
-        item: T = self.data[self.front_pointer]
-        self.front_pointer += 1
-        self.front_pointer %= self.capacity
-        self.size -= 1
+        item: Tuple[T, int] = self.__items.get(0)
+        self.__items.remove(0)
         return item
 
 

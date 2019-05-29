@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import TypeVar, Generic, Callable
+from typing import Tuple, TypeVar, Generic, Callable
 
 T = TypeVar('T')
 
@@ -27,17 +27,20 @@ class ListItem(Generic[T]):
 
 class LinkedListIterator(Generic[T]):
     __current: ListItem[T]
+    __index: int
 
     def __init__(self, start_item: ListItem[T]):
         self.__current = start_item
+        self.__index = 0
 
-    def __iter__(self) -> T:
-        return self
-
-    def __next__(self):
+    def __next__(self) -> Tuple[T, int]:
+        if self.__current is None:
+            raise StopIteration
         item: ListItem[T] = self.__current
+        index: int = self.__index
         self.__current = item.get_next_item()
-        return item.get_value()
+        self.__index += 1
+        return item.get_value(), index
 
 
 class LinkedList(Generic[T]):
@@ -46,15 +49,31 @@ class LinkedList(Generic[T]):
     def __init__(self):
         self.__start_item = None
 
-    def insert_at_start(self, item: T):
-        if self.__start_item is None:
-            self.__start_item = ListItem(item)
-        else:
-            old_start_item: ListItem[T] = self.__start_item
-            self.__start_item = ListItem(item)
-            self.__start_item.set_next(old_start_item)
+    def __iter__(self) -> T:
+        return LinkedListIterator(self.__start_item)
 
-    def insert_at_end(self, item: T):
+    def is_empty(self) -> bool:
+        return self.__start_item is None
+
+    def insert(self, item: T, index: int) -> bool:
+        new_item: ListItem[T] = ListItem(item)
+        if index == 0:
+            new_item.set_next(self.__start_item)
+            self.__start_item = new_item
+            return True
+        else:
+            _index: int = 1
+            curr_item: ListItem[T] = self.__start_item
+            while curr_item is not None:
+                if _index == index:
+                    new_item.set_next(curr_item.get_next_item())
+                    curr_item.set_next(new_item)
+                    return True
+                curr_item = curr_item.get_next_item()
+                _index += 1
+        return False
+
+    def append(self, item: T):
         if self.__start_item is None:
             self.__start_item = ListItem(item)
         else:
@@ -63,61 +82,37 @@ class LinkedList(Generic[T]):
                 curr_item = curr_item.get_next_item()
             curr_item.set_next(ListItem[T](item))
 
-    def insert_after_match(self, item: T, matcher: Callable[[T], bool]):
-        new_item: ListItem[T] = ListItem(item)
-        if self.__start_item is None:
-            self.__start_item = new_item
-        elif matcher(self.__start_item.get_value()):
-            new_item.set_next(self.__start_item.get_next_item())
-            self.__start_item.set_next(new_item)
+    def get(self, index: int) -> T or None:
+        for item, _index in self:
+            if index == _index:
+                return item
+        return None
+
+    def remove(self, index: int) -> bool:
+        if index == 0:
+            if self.__start_item is not None:
+                self.__start_item = self.__start_item.get_next_item()
+                return True
         else:
+            _index: int = 1
             curr_item: ListItem[T] = self.__start_item
-            while curr_item is not None:
-                if matcher(curr_item.get_value()):
-                    old_next_item: ListItem[T] = curr_item.get_next_item()
-                    curr_item.set_next(new_item)
-                    new_item.set_next(old_next_item)
-                    break
-                else:
-                    curr_item = curr_item.get_next_item()
+            while curr_item.get_next_item() is not None:
+                if _index == index:
+                    _to_remove: ListItem[T] = curr_item.get_next_item()
+                    if _to_remove is not None:
+                        curr_item.set_next(_to_remove.get_next_item())
+                        return True
+                    else:
+                        return False
+                curr_item = curr_item.get_next_item()
+                _index += 1
+        return False
 
-    def insert_before_match(self, item: T, matcher: Callable[[T], bool]):
-        new_item: ListItem[T] = ListItem(item)
-
-        if self.__start_item is None:
-            self.__start_item = new_item
-        elif matcher(self.__start_item.get_value()):
-            new_item.set_next(self.__start_item)
-            self.__start_item = new_item
-        else:
-            prev_item: ListItem[T] or None = None
-            curr_item: ListItem[T] = self.__start_item
-            while curr_item is not None:
-                if matcher(curr_item.get_value()):
-                    if prev_item is not None:
-                        prev_item.set_next(new_item)
-                    new_item.set_next(curr_item)
-                    break
-                else:
-                    prev_item = curr_item
-                    curr_item = curr_item.get_next_item()
-
-    def get_at_index(self, index: int):
-        _index: int = 0
+    def iterate_items(self, callback: Callable[[T, int], None]):
         curr_item: ListItem[T] = self.__start_item
+        index: int = 0
         while curr_item is not None:
-            if _index == index:
-                return curr_item.get_value()
-            curr_item = curr_item.get_next_item()
-            _index += 1
-
-    def items(self) -> LinkedListIterator[T]:
-        return LinkedListIterator(self.__start_item)
-
-    def iterate_items(self, callback: Callable[[T], None]):
-        curr_item: ListItem[T] = self.__start_item
-        while curr_item is not None:
-            callback(curr_item.get_value())
+            callback(curr_item.get_value(), index)
             curr_item = curr_item.get_next_item()
 
     def __repr__(self):

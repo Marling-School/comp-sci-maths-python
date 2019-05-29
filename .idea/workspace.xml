@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02bbe72e-4e25-4724-8269-6a145c1671b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +15,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="355">
+              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -32,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-918">
-              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+            <state relative-caret-position="-162">
+              <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -41,11 +40,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="399">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,11 +78,13 @@
       <find>myQueue</find>
       <find>my_queue</find>
       <find>dequeue</find>
+      <find>get_at_index</find>
     </findStrings>
     <replaceStrings>
       <replace>my_queue</replace>
       <replace>my_stack</replace>
       <replace>pop</replace>
+      <replace>get</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -123,11 +139,11 @@
         <option value="$PROJECT_DIR$/CORE_DataStructures/Files/add_person_csv.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Files/Person.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Array/multiDimensional.py" />
-        <option value="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue/test.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py" />
       </list>
     </option>
   </component>
@@ -254,7 +270,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_linked_list">
+  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_priority_queue">
     <configuration name="add_person_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -311,20 +327,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test.TestStringMethods.test_circular_queue" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="VidLearn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/CircularQueue" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.TestStringMethods.test_circular_queue&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for test.TestStringMethods.test_linked_list" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -339,20 +341,34 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for test.TestStringMethods.test_priority_queue" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="VidLearn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestStringMethods.test_priority_queue&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.add_person_csv" />
       <item itemvalue="Python.multiDimensional" />
-      <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue (1)" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_linked_list" />
+      <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_priority_queue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_priority_queue" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_linked_list" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue (1)" />
         <item itemvalue="Python.multiDimensional" />
         <item itemvalue="Python.add_person_csv" />
-        <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue" />
       </list>
     </recent_temporary>
   </component>
@@ -370,35 +386,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.28 at 23h 47m 36s.xml">
+    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.29 at 11h 46m 29s.xml">
       <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.28 at 23h 52m 31s.xml">
+    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.29 at 11h 47m 21s.xml">
       <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.28 at 23h 52m 54s.xml">
+    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.29 at 11h 47m 38s.xml">
       <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.28 at 23h 54m 31s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 52m 24s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.28 at 23h 58m 31s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 52m 32s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.28 at 23h 58m 58s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 52m 47s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.28 at 23h 59m 44s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 53m 24s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.29 at 00h 02m 35s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 54m 26s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.29 at 00h 07m 52s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 54m 51s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_linked_list - 2019.05.29 at 00h 08m 33s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_linked_list" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 57m 03s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -713,16 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/CircularQueue/CircularQueue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-366">
@@ -742,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="355">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -752,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        <state relative-caret-position="-162">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
@@ -762,8 +768,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="399">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
