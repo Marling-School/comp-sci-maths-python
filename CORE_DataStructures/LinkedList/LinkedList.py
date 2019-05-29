@@ -55,7 +55,7 @@ class LinkedList(Generic[T]):
     def is_empty(self) -> bool:
         return self.__start_item is None
 
-    def insert(self, item: T, index: int) -> bool:
+    def insert(self, index: int, item: T) -> bool:
         new_item: ListItem[T] = ListItem(item)
         if index == 0:
             new_item.set_next(self.__start_item)

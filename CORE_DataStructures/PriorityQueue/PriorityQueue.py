@@ -1,25 +1,24 @@
 from typing import Tuple, List, TypeVar, Generic
-from CORE_DataStructures.LinkedList.LinkedList import LinkedList
 
 T = TypeVar('T')
 
 
 class PriorityQueue(Generic[T]):
-    __items: LinkedList[Tuple[T, int]]
+    __items: List[Tuple[T, int]]
 
     def __init__(self):
-        self.__items = LinkedList()
+        self.__items = []
 
     def __repr__(self):
         return "{}".format(self.__items)
 
     def is_empty(self):
-        return self.__items.is_empty()
+        return len(self.__items) == 0
 
     def enqueue(self, item: T, priority: int):
-        for prioritisedItem, index in self.__items:
+        for index, prioritisedItem in enumerate(self.__items):
             if priority > prioritisedItem[1]:
-                self.__items.insert((item, priority), index)
+                self.__items.insert(index, (item, priority))
                 return
         self.__items.append((item, priority))
 
@@ -27,8 +26,7 @@ class PriorityQueue(Generic[T]):
         if self.is_empty():
             raise Exception('Queue Empty')
 
-        item: Tuple[T, int] = self.__items.get(0)
-        self.__items.remove(0)
-        return item
+        return self.__items.pop(0)
+
 
 

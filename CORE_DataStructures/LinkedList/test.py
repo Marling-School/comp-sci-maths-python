@@ -8,8 +8,8 @@ class TestStringMethods(unittest.TestCase):
         my_list = LinkedList[str]()
         my_list.append('Joe')  # Joe
         my_list.append('Kate')  # Joe, Kate
-        my_list.insert('Indigo', 1)  # Joe, Indigo, Kate
-        my_list.insert('Tom', 1)  # Joe, Tom, Indigo, Kate
+        my_list.insert(1, 'Indigo')  # Joe, Indigo, Kate
+        my_list.insert(1, 'Tom')  # Joe, Tom, Indigo, Kate
         my_list.append('Kirsten')  # Joe, Tom, Indigo, Kate, Kirsten
 
         at0: str = my_list.get(0)
