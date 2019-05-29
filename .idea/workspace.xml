@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02bbe72e-4e25-4724-8269-6a145c1671b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_DataStructures/Graph/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_DataStructures/Graph/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +14,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="323">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -27,40 +47,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-313451744/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="3660" column="8" selection-start-line="3660" selection-start-column="8" selection-end-line="3660" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="206">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -84,6 +74,7 @@
       <find>dequeue</find>
       <find>get_at_index</find>
       <find>insert</find>
+      <find>get_known_items</find>
     </findStrings>
     <replaceStrings>
       <replace>my_queue</replace>
@@ -133,8 +124,6 @@
         <option value="$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/AdjListGraph.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/foo.py" />
-        <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/test.py" />
-        <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/Tree/BinaryTree.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py" />
@@ -149,10 +138,12 @@
         <option value="$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/LinkedList/test.py" />
         <option value="$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py" />
+        <option value="$PROJECT_DIR$/CORE_DataStructures/Graph/test.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="478" />
     <option name="y" value="44" />
     <option name="width" value="1183" />
@@ -275,28 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_priority_queue">
-    <configuration name="add_person_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VidLearn" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Files" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CORE_DataStructures/Files/add_person_csv.py" />
-      <option name="PARAMETERS" value="&quot;C:\Users\Joe Sharp\Desktop\people.csv&quot;" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph">
     <configuration name="multiDimensional" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,6 +286,20 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="VidLearn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_DataStructures/Graph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestStringMethods.test_adj_list_graph&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests for test.TestStringMethods.test_circular_queue (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -361,19 +345,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.add_person_csv" />
       <item itemvalue="Python.multiDimensional" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue (1)" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_linked_list" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_priority_queue" />
+      <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_adj_list_graph" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_priority_queue" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_linked_list" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_circular_queue (1)" />
         <item itemvalue="Python.multiDimensional" />
-        <item itemvalue="Python.add_person_csv" />
       </list>
     </recent_temporary>
   </component>
@@ -391,53 +375,53 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 52m 24s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 33m 45s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 52m 32s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 34m 28s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 52m 47s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 35m 25s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 53m 24s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 37m 45s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 54m 26s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 42m 30s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 54m 51s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 42m 51s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 57m 03s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 43m 01s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 11h 58m 04s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 43m 23s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 12h 00m 58s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 43m 40s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_priority_queue - 2019.05.29 at 12h 02m 17s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_priority_queue" configurationId="tests" />
+    <history-entry file="Unittests_for_test_TestStringMethods_test_adj_list_graph - 2019.05.29 at 14h 46m 59s.xml">
+      <configuration name="Unittests for test.TestStringMethods.test_adj_list_graph" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="478" y="44" width="1183" height="982" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24803494" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11189913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286219" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.3133098" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.22860238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39929327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49868995" weight="0.26030624" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49868995" weight="0.26002166" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50131005" side_tool="true" weight="0.35100117" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -641,16 +625,6 @@
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/469259909/_functools.py" />
     <entry file="file://$USER_HOME$/.conda/envs/VidLearn_Python/lib/python3.7/typing.py" />
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/foo.py" />
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CORE_Programming/concepts4/highest_common_factor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -671,16 +645,6 @@
           <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -750,12 +714,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-313451744/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="186">
+          <caret line="3660" column="8" selection-start-line="3660" selection-start-column="8" selection-end-line="3660" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -770,27 +741,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/LinkedList/LinkedList.py">
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+        <state relative-caret-position="206">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-313451744/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="3660" column="8" selection-start-line="3660" selection-start-column="8" selection-end-line="3660" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="323">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
