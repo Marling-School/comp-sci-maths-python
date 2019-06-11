@@ -1,41 +1,9 @@
 from __future__ import annotations
-from abc import ABC, abstractmethod
-from typing import TypeVar, Generic, Callable, List
+from typing import TypeVar, Callable, List
+
+from CORE_Algorithms.TreeTraversal.BinaryTree import BinaryTree
 
 T = TypeVar('T', str, int, float)
-
-
-class BinaryTree(Generic[T], ABC):
-    """
-    Interface for a graph, edges can be added, and then the set of related vertices can be queried
-    """
-    @abstractmethod
-    def add(self, from_v: T) -> None:
-        pass
-
-    @abstractmethod
-    def get_right(self) -> BinaryTree[T] or None:
-        pass
-
-    @abstractmethod
-    def get_left(self) -> BinaryTree[T] or None:
-        pass
-
-    @abstractmethod
-    def get_value(self) -> T or None:
-        pass
-
-    @abstractmethod
-    def pre_order(self) -> List[T]:
-        pass
-
-    @abstractmethod
-    def in_order(self) -> List[T]:
-        pass
-
-    @abstractmethod
-    def post_order(self) -> List[T]:
-        pass
 
 
 class BinaryTreeImpl(BinaryTree[T]):
