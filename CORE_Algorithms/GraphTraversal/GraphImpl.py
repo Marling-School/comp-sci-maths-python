@@ -71,22 +71,22 @@ class GraphImpl(Graph[T]):
 
         items: List[T] = []
 
-        # Visit the starting vertex
-        unvisited.remove(start_vertex)
-        items.append(start_vertex)
-        pending_stack.push(start_vertex)
-
         vertex: T = start_vertex
         while True:
             # Get the related edges which are also in the unvisited set
-            related: Set[T] = self.get_related(vertex).intersection(unvisited)
+            related: Set[T] = self.get_related(vertex)
+
+            if vertex in unvisited:
+                unvisited.remove(vertex)
+                items.append(vertex)
+                pending_stack.push(vertex)
+
+            # Filter out the unvisited ones
+            related = related.intersection(unvisited)
 
             # If we have related edges, visit one of them
             if len(related) > 0:
                 vertex: T = related.pop()
-                unvisited.remove(vertex)
-                items.append(vertex)
-                pending_stack.push(vertex)
             else:
                 vertex = pending_stack.pop()
 

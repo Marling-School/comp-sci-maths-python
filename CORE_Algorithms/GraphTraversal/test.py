@@ -1,5 +1,5 @@
 import unittest
-from typing import Set
+from typing import Set, List
 from CORE_Algorithms.GraphTraversal.Graph import Graph
 from CORE_Algorithms.GraphTraversal.GraphImpl import GraphImpl
 
@@ -33,12 +33,14 @@ class TestStringMethods(unittest.TestCase):
 
     def test_dfs(self):
         print("Depth First Search on {}".format(self.my_graph))
-        for v in self.my_graph.depth_first_search('S'):
+        dfs: List[str] = self.my_graph.depth_first_search('S')
+        for v in dfs:
             print(v, end=", ")
         print("")
 
     def test_bfs(self):
         print("Breadth First Search on {}".format(self.my_graph))
-        for v in self.my_graph.breadth_first_search('S'):
+        bfs: List[str] = self.my_graph.breadth_first_search('S')
+        for v in bfs:
             print(v, end=", ")
         print("")

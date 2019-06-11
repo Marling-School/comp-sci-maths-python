@@ -1,6 +1,6 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from typing import TypeVar, Generic, Callable
+from typing import TypeVar, Generic, Callable, List
 
 T = TypeVar('T', str, int, float)
 
@@ -25,6 +25,18 @@ class BinaryTree(Generic[T], ABC):
     def get_value(self) -> T or None:
         pass
 
+    @abstractmethod
+    def pre_order(self) -> List[T]:
+        pass
+
+    @abstractmethod
+    def in_order(self) -> List[T]:
+        pass
+
+    @abstractmethod
+    def post_order(self) -> List[T]:
+        pass
+
 
 class BinaryTreeImpl(BinaryTree[T]):
     __is_to_left: Callable[[T, T], bool]
@@ -40,6 +52,11 @@ class BinaryTreeImpl(BinaryTree[T]):
 
     def __repr__(self):
         return "({} {} {})".format(self.__left_branch, self.__value, self.__right_branch)
+
+    def __eq__(self, other):
+        return (self.__value == other.__value)\
+               and (self.__left_branch == other.__left_branch)\
+               and (self.__right_branch == other.__right_branch)
 
     def add(self, item: T):
         if self.__value is None:
@@ -63,3 +80,29 @@ class BinaryTreeImpl(BinaryTree[T]):
 
     def get_value(self) -> T or None:
         return self.__value
+
+    def pre_order(self) -> List[T]:
+        nodes: List[T] = [self.__value]
+        if self.__left_branch is not None:
+            nodes.extend(self.__left_branch.pre_order())
+        if self.__right_branch is not None:
+            nodes.extend(self.__right_branch.pre_order())
+        return nodes
+
+    def in_order(self) -> List[T]:
+        nodes: List[T] = []
+        if self.__left_branch is not None:
+            nodes.extend(self.__left_branch.in_order())
+        nodes.append(self.__value)
+        if self.__right_branch is not None:
+            nodes.extend(self.__right_branch.in_order())
+        return nodes
+
+    def post_order(self) -> List[T]:
+        nodes: List[T] = []
+        if self.__left_branch is not None:
+            nodes.extend(self.__left_branch.pre_order())
+        if self.__right_branch is not None:
+            nodes.extend(self.__right_branch.pre_order())
+        nodes.append(self.__value)
+        return nodes

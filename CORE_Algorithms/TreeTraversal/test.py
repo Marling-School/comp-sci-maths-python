@@ -1,6 +1,6 @@
 import unittest
-from CORE_DataStructures.BinaryTree.BinaryTree \
-    import TraverseInOrder, TraversePostOrder, TraversePreOrder, BinaryTree
+from typing import List
+from CORE_Algorithms.TreeTraversal.Tree import BinaryTree, BinaryTreeImpl
 
 
 def str_is_to_left(a: str, b: str) -> bool:
@@ -8,24 +8,44 @@ def str_is_to_left(a: str, b: str) -> bool:
 
 
 class TestStringMethods(unittest.TestCase):
+    __my_tree: BinaryTree[str]
+
+    def setUp(self) -> None:
+        self.__my_tree = BinaryTreeImpl(str_is_to_left)
+
+        self.__my_tree.add('B')
+        self.__my_tree.add('A')
+        self.__my_tree.add('D')
+        self.__my_tree.add('E')
+        self.__my_tree.add('C')
+        self.__my_tree.add('F')
 
     def test_tree(self):
-        my_tree: BinaryTree[str] = BinaryTree(str_is_to_left)
+        print("My Binary Tree:{}".format(self.__my_tree))
 
-        my_tree.add('B')
-        my_tree.add('A')
-        my_tree.add('D')
-        my_tree.add('E')
-        my_tree.add('C')
-        my_tree.add('F')
+    def test_pre_order(self):
+        copy_tree: BinaryTree[str] = BinaryTreeImpl(str_is_to_left)
+        for v in self.__my_tree.pre_order():
+            copy_tree.add(v)
 
-        print("My Binary Tree:{}".format(my_tree))
+        print("Pre-Order should create identical copies")
+        print(copy_tree)
+        print(self.__my_tree)
+        self.assertEqual(self.__my_tree, copy_tree)
 
-        for t in [TraversePreOrder, TraverseInOrder, TraversePostOrder]:
-            traverse: t[str] = t()
-            print("Traversing {}".format(traverse.get_name()))
-            traverse.traverse(my_tree, lambda x: print(x, end=", "))
-            print("")
+    def test_in_order(self):
+        print("In Order Test")
+        traversed: List[str] = self.__my_tree.in_order()
+        for v in traversed:
+            print(v, end=", ")
+        print("")
+
+    def test_post_order(self):
+        print("Post Order Test")
+        traversed: List[str] = self.__my_tree.post_order()
+        for v in traversed:
+            print(v, end=", ")
+        print("")
 
 
 
