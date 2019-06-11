@@ -51,7 +51,8 @@ class GraphImpl(Graph[T]):
             # Get the related edges which are also in the unvisited set
             related: Set[T] = self.get_related(vertex).intersection(unvisited)
 
-            # If we have related edges, add them all to the items, remove them from unvisited and push them to the queue
+            # If we have related edges, add them all to the items,
+            # remove them from unvisited and push them to the queue
             if len(related) > 0:
                 for other in related:
                     unvisited.remove(other)
