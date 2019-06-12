@@ -1,11 +1,12 @@
 from typing import Dict, Callable
 from CORE_Algorithms.Stack.StackImpl import Stack, StackImpl
 
-operators: Dict[str, Callable[[float, float], float]] = dict()
-operators['+'] = lambda a, b: a + b
-operators['-'] = lambda a, b: a - b
-operators['*'] = lambda a, b: a * b
-operators['/'] = lambda a, b: a / b
+operators: Dict[str, Callable[[float, float], float]] = {
+    "+": lambda a, b: a + b,
+    "-": lambda a, b: a - b,
+    '*': lambda a, b: a * b,
+    '/': lambda a, b: a / b
+}
 
 
 class ReversePolishNotation:
@@ -25,11 +26,16 @@ class ReversePolishNotation:
         for e in self.__expression:
             if e in operators:
                 op: Callable[[float, float], float] = operators[e]
-                a: float = my_stack.pop()
                 b: float = my_stack.pop()
+                a: float = my_stack.pop()
                 ab = op(a, b)
+                # print("Evaluating {} {} {} = {}".format(a, e, b, ab))
                 my_stack.push(ab)
             else:
+                if e not in values:
+                    raise Exception(
+                        "Could not find {} in values for expression {}".format(e, self.__expression))
+
                 value: float = values.get(e)
                 my_stack.push(value)
 
