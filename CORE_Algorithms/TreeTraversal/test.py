@@ -58,6 +58,3 @@ class TestBinaryTree(unittest.TestCase):
         for v in traversed:
             print(v, end=", ")
         print("")
-
-
-
