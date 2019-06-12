@@ -1,5 +1,5 @@
 import unittest
-from CORE_Algorithms.Arithmetic.ReversePolishNotation import ReversePolishNotation
+from CORE_Algorithms.ReversePolishNotation.ReversePolishNotation import ReversePolishNotation
 
 
 class TestReversePolishNotation(unittest.TestCase):
