@@ -34,16 +34,16 @@ class TestBubbleSort(unittest.TestCase):
         self.assertEqual([9, 8, 5, 4, 3, 1], my_reversed_list)
 
     def test_string(self):
-        my_list: List[str] = ['Bravo', 'Delta', 'Charlie', 'Alpha', 'Echo', 'Sierra', 'Foxtrot']
+        my_list: List[str] = ["Bravo", "Delta", "Charlie", "Alpha", "Echo", "Sierra", "Foxtrot"]
         my_sorted_list: List[str] = bubble_sort(my_list)
         my_reversed_list: List[str] = bubble_sort(my_list, lambda x, y: x < y)
         print("Strings\nInput: {}\nSorted: {}\nReversed: {}".format(
             my_list, my_sorted_list, my_reversed_list))
         self.assertEqual(
-            ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Sierra'],
+            ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Sierra"],
             my_sorted_list)
         self.assertEqual(
-            ['Sierra', 'Foxtrot', 'Echo', 'Delta', 'Charlie', 'Bravo', 'Alpha'],
+            ["Sierra", "Foxtrot", "Echo", "Delta", "Charlie", "Bravo", "Alpha"],
             my_reversed_list)
 
     def test_random(self):
@@ -64,11 +64,11 @@ class TestBubbleSort(unittest.TestCase):
 
     def test_objects(self):
         my_list: List[Person] = [
-            Person('Frodo', 55),
-            Person('Sam', 35),
-            Person('Bilbo', 111),
-            Person('Sauron', 3000),
-            Person('Gollum', 500)
+            Person("Frodo", 55),
+            Person("Sam", 35),
+            Person("Bilbo", 111),
+            Person("Sauron", 3000),
+            Person("Gollum", 500)
         ]
         by_name: List[Person] = bubble_sort(my_list, lambda x, y: x.get_name() > y.get_name())
         by_age: List[Person] = bubble_sort(my_list, lambda x, y: x.get_age() > y.get_age())
@@ -78,5 +78,5 @@ class TestBubbleSort(unittest.TestCase):
 
         print("Objects\nInput: {}\nBy Name: {}\nBy Age: {}".format(
             my_list, by_name, by_age))
-        self.assertEqual(['Bilbo', 'Frodo', 'Gollum', 'Sam', 'Sauron'], by_name_names)
-        self.assertEqual(['Sam', 'Frodo', 'Bilbo', 'Gollum', 'Sauron'], by_age_names)
+        self.assertEqual(["Bilbo", "Frodo", "Gollum", "Sam", "Sauron"], by_name_names)
+        self.assertEqual(["Sam", "Frodo", "Bilbo", "Gollum", "Sauron"], by_age_names)
