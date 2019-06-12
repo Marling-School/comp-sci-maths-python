@@ -1,4 +1,4 @@
-from typing import TypeVar, Dict, Set, List
+from typing import TypeVar, Dict, Set, List, Iterable, Iterator
 
 from CORE_Algorithms.GraphTraversal.Graph import Graph
 from CORE_Algorithms.Queue.Queue import Queue
@@ -37,28 +37,29 @@ class GraphImpl(Graph[T]):
 
     def breadth_first_search(self, start_vertex: T) -> List[T]:
         pending_queue: Queue[T] = QueueImpl()
-        unvisited: Set[T] = set(self.__data.keys())
-
         items: List[T] = []
 
         # Visit the starting vertex
-        unvisited.remove(start_vertex)
-        items.append(start_vertex)
         pending_queue.enqueue(start_vertex)
+        items.append(start_vertex)
 
         vertex: T = start_vertex
         while True:
             # Get the related edges which are also in the unvisited set
-            related: Set[T] = self.get_related(vertex).intersection(unvisited)
+            related: Iterable[T] = iter(filter(
+                lambda x: x not in items,
+                self.get_related(vertex)
+            ))
 
             # If we have related edges, add them all to the items,
             # remove them from unvisited and push them to the queue
-            if len(related) > 0:
-                for other in related:
-                    unvisited.remove(other)
-                    items.append(other)
-                    pending_queue.enqueue(other)
-            else:
+            any_seen: bool = False
+            for other in related:
+                items.append(other)
+                pending_queue.enqueue(other)
+                any_seen = True
+
+            if not any_seen:
                 vertex = pending_queue.dequeue()
 
             if pending_queue.is_empty():
@@ -68,27 +69,24 @@ class GraphImpl(Graph[T]):
 
     def depth_first_search(self, start_vertex: T) -> List[T]:
         pending_stack: Stack[T] = StackImpl()
-        unvisited: Set[T] = set(self.__data.keys())
-
         items: List[T] = []
 
         vertex: T = start_vertex
         while True:
             # Get the related edges which are also in the unvisited set
-            related: Set[T] = self.get_related(vertex)
-
-            if vertex in unvisited:
-                unvisited.remove(vertex)
+            if vertex not in items:
                 items.append(vertex)
                 pending_stack.push(vertex)
 
             # Filter out the unvisited ones
-            related = related.intersection(unvisited)
+            related: Iterator[T] = iter(filter(
+                lambda x: x not in items,
+                self.get_related(vertex)
+            ))
 
-            # If we have related edges, visit one of them
-            if len(related) > 0:
-                vertex: T = related.pop()
-            else:
+            try:
+                vertex: T = next(related)
+            except StopIteration:
                 vertex = pending_stack.pop()
 
             if pending_stack.is_empty():

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02bbe72e-4e25-4724-8269-6a145c1671b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/BinaryTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/Tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/BinaryTreeImpl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/GraphImpl.py" beforeDir="false" afterPath="$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/GraphImpl.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,22 +13,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/BinaryTreeImpl.py">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="323">
+              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/test.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+            <state relative-caret-position="527">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -40,12 +46,69 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/BinaryTree.py">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="376">
+              <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/GraphImpl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="89" column="44" lean-forward="true" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,11 +196,11 @@
         <option value="$PROJECT_DIR$/CORE_Algorithms/Queue/QueueImpl.py" />
         <option value="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/Tree.py" />
         <option value="$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/Graph.py" />
-        <option value="$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/GraphImpl.py" />
         <option value="$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/test.py" />
         <option value="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/BinaryTreeImpl.py" />
         <option value="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/BinaryTree.py" />
         <option value="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal/test.py" />
+        <option value="$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/GraphImpl.py" />
       </list>
     </option>
   </component>
@@ -153,47 +216,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="VidLearn_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn_Python" type="462c0819:PsiDirectoryNode" />
+              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VidLearn_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn_Python" type="462c0819:PsiDirectoryNode" />
+              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
               <item name="CORE_Algorithms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VidLearn_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn_Python" type="462c0819:PsiDirectoryNode" />
+              <item name="VidLearn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VidLearn" type="462c0819:PsiDirectoryNode" />
               <item name="CORE_Algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="GraphTraversal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VidLearn_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Queue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VidLearn_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Stack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VidLearn_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VidLearn_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="CORE_Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="TreeTraversal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test.TestBinaryTree">
+  <component name="RunManager" selected="Python tests.Unittests for test.TestStringMethods (1)">
     <configuration name="Unittests for test.TestBinaryTree" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="VidLearn_Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,12 +289,12 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test.TestStringMethods" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="VidLearn_Python" />
+    <configuration name="Unittests for test.TestStringMethods (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="VidLearn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Algorithms/TreeTraversal" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CORE_Algorithms/GraphTraversal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -304,15 +349,15 @@
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_bfs" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_dfs" />
       <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_pre_order" />
-      <item itemvalue="Python tests.Unittests for test.TestStringMethods (1)" />
       <item itemvalue="Python tests.Unittests for test.TestBinaryTree" />
+      <item itemvalue="Python tests.Unittests for test.TestStringMethods (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test.TestStringMethods (1)" />
         <item itemvalue="Python tests.Unittests for test.TestBinaryTree" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_dfs" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_bfs" />
-        <item itemvalue="Python tests.Unittests for test.TestStringMethods (1)" />
         <item itemvalue="Python tests.Unittests for test.TestStringMethods.test_pre_order" />
       </list>
     </recent_temporary>
@@ -331,27 +376,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.11 at 13h 21m 16s.xml">
-      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.11 at 13h 21m 54s.xml">
-      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.11 at 13h 22m 31s.xml">
-      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.11 at 13h 23m 34s.xml">
-      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_bfs - 2019.06.11 at 14h 16m 39s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_bfs" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestStringMethods_test_dfs - 2019.06.11 at 14h 27m 58s.xml">
-      <configuration name="Unittests for test.TestStringMethods.test_dfs" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_TestBinaryTree - 2019.06.11 at 14h 46m 48s.xml">
-      <configuration name="Unittests for test.TestBinaryTree" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_TestBinaryTree - 2019.06.11 at 14h 47m 16s.xml">
       <configuration name="Unittests for test.TestBinaryTree" configurationId="tests" />
     </history-entry>
@@ -361,17 +385,38 @@
     <history-entry file="Unittests_for_test_TestBinaryTree - 2019.06.11 at 14h 54m 09s.xml">
       <configuration name="Unittests for test.TestBinaryTree" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.12 at 00h 48m 21s.xml">
+      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.12 at 00h 51m 20s.xml">
+      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.12 at 00h 51m 29s.xml">
+      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.12 at 00h 52m 31s.xml">
+      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.12 at 00h 56m 36s.xml">
+      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.12 at 00h 57m 06s.xml">
+      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_TestStringMethods_(1) - 2019.06.12 at 00h 59m 07s.xml">
+      <configuration name="Unittests for test.TestStringMethods (1)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="376" y="40" width="1183" height="982" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22410148" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24803494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286219" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.3253012" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49868995" visible="true" weight="0.32508835" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3987952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -522,17 +567,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/VidLearn_Python/lib/python3.7/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6255">
-          <caret line="427" selection-start-line="427" selection-end-line="427" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/VidLearn_Python/lib/python3.7/typing.py" />
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/Stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="170">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -548,8 +587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="20" selection-end-line="32" />
+        <state relative-caret-position="527">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -568,15 +607,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/PriorityQueue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        <state relative-caret-position="323">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/PriorityQueue/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="425">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -585,8 +624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/BinaryTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="376">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
@@ -595,8 +634,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/BinaryTree/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        <state relative-caret-position="391">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -605,8 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Graph/WeightedGraph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="21" column="66" lean-forward="true" selection-start-line="21" selection-start-column="66" selection-end-line="23" selection-end-column="38" />
+        <state relative-caret-position="731">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
@@ -637,13 +676,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/VidLearn_Python/lib/python3.7/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/VidLearn_Python/lib/python3.7/unittest/suite.py" />
     <entry file="file://$PROJECT_DIR$/CORE_DataStructures/Stack/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -664,23 +697,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/DepthFirstSearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/BreadthFirstSearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/DepthFirstSearch.py" />
+    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/BreadthFirstSearch.py" />
     <entry file="file://$PROJECT_DIR$/CORE_Algorithms/Stack/Stack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -718,39 +736,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/469259909/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="3638" column="8" selection-start-line="3638" selection-start-column="8" selection-end-line="3638" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2019.1/python_stubs/469259909/builtins.py" />
     <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/GraphImpl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-490">
-          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -781,6 +773,26 @@
           <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CORE_Algorithms/GraphTraversal/GraphImpl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="89" column="44" lean-forward="true" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
