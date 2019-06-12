@@ -4,7 +4,7 @@ T = TypeVar('T')
 
 
 def bubble_sort(input_list: List[T],
-                comparator: Callable[[T, T], bool] = lambda x, y: x > y) -> List[T]:
+                comparator: Callable[[T, T], bool]) -> List[T]:
     """"
     Sorts the input list, using the provided comparator
     to decide if two elements are in the correct order.
