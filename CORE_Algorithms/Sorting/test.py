@@ -39,7 +39,11 @@ name_order: CompareFunction[Person] = lambda x, y: x.get_name() > y.get_name()
 age_order: CompareFunction[Person] = lambda x, y: x.get_age() > y.get_age()
 
 
-class TestSort():
+class TestSort:
+    """"
+    General test class, it needs to be given the sort function and the test case
+    so that it can call sorts and make assertions.
+    """
     __test: unittest.TestCase = None
     __sort_function: SortFunction = None
 
