@@ -7,7 +7,7 @@ from CORE_Algorithms.Searching.common import MatchFunction, SearchFunction, NO_M
 from CORE_Algorithms.Sorting.common import primitive_compare
 from CORE_Algorithms.Sorting.Person import Person, compare_name, compare_age
 
-# Sort Functions for Person objects
+# Match Functions for Person objects and criteria
 match_name: MatchFunction = lambda criteria, item: primitive_compare(criteria, item.get_name())
 match_age: MatchFunction = lambda criteria, item: primitive_compare(criteria, item.get_age())
 
@@ -20,8 +20,10 @@ class TestSearchFunctions(unittest.TestCase):
             my_list: List[int] = [4, 5, 3, 1, 9, 8]
             my_match: int = search(my_list, 3, primitive_compare, primitive_compare)
             my_non_match: int = search(my_list, 45, primitive_compare, primitive_compare)
-            print("Integers: {}\nInput: {}\nCriteria: {} -> Match: {}\nCriteria: {} -> Non-Match: {}".format(
-                search.__name__, my_list, 3, my_match, 45, my_non_match))
+            print("Integers: {}".format(search.__name__))
+            print("Input: {}".format(my_list))
+            print("Criteria: {} -> Match: {}".format(3, my_match))
+            print("Criteria: {} -> Non-Match: {}".format(45, my_non_match))
             self.assertEqual(2, my_match)
             self.assertEqual(NO_MATCH, my_non_match)
 
@@ -30,8 +32,10 @@ class TestSearchFunctions(unittest.TestCase):
             my_list: List[str] = ["Bravo", "Delta", "Charlie", "Alpha", "Echo", "Sierra", "Foxtrot"]
             my_match: int = search(my_list, "Echo", primitive_compare, primitive_compare)
             my_non_match: int = search(my_list, "X-Ray", primitive_compare, primitive_compare)
-            print("Strings: {}\nInput: {}\nCriteria: {} -> Match: {}\nCriteria: {} -> Non-Match:{}".format(
-                search.__name__, my_list, "Echo", my_match, "X-Ray", my_non_match))
+            print("Strings: {}".format(search.__name__))
+            print("Input: {}".format(my_list))
+            print("Criteria: {} -> Match: {}".format("Echo", my_match))
+            print("Criteria: {} -> Non-Match:{}".format("X-Ray", my_non_match))
             self.assertEqual(4, my_match)
             self.assertEqual(NO_MATCH, my_non_match)
 
@@ -48,7 +52,8 @@ class TestSearchFunctions(unittest.TestCase):
             by_age: int = search(my_list, 3000, match_age, compare_age)
             my_non_match: int = search(my_list, "Aragorn", match_name, compare_name)
 
-            print("Objects: {}\nInput: {}".format(search.__name__, my_list))
+            print("Objects: {}".format(search.__name__))
+            print("Input: {}".format(my_list))
             print("By Name: Criteria: {} -> {}".format("Frodo", by_name))
             print("By Age: Criteria: {} -> {}".format(3000, by_age))
             print("Non-Match: Criteria: {} -> {}".format("Aragorn", my_non_match))
