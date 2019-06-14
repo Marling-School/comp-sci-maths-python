@@ -1,6 +1,6 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from typing import TypeVar, Generic, List
+from typing import TypeVar, Generic, List, Optional
 
 T = TypeVar('T', str, int, float)
 
@@ -13,10 +13,31 @@ class BinaryTree(Generic[T], ABC):
 
     """
     Add a node to the binary tree,
-    this is done recursively until a leaf node can be created
+    this is done recursively until a leaf node can be created.
+    Returns the tree node that will contain the value
     """
     @abstractmethod
-    def add(self, from_v: T) -> None:
+    def add(self, from_v: T) -> BinaryTree[T]:
+        pass
+
+    """
+    Explicitly set the value
+    """
+    def set_value(self, value: Optional[T]) -> None:
+        pass
+
+    """
+    Explicitly set the right branch
+    Returns the created branch
+    """
+    def set_right(self, value: Optional[T]) -> BinaryTree[T]:
+        pass
+
+    """
+    Explicitly set the left branch
+    Returns the created branch
+    """
+    def set_left(self, value: Optional[T]) -> BinaryTree[T]:
         pass
 
     """
@@ -51,7 +72,7 @@ class BinaryTree(Generic[T], ABC):
     Return a list of nodes using in-order traversal
     """
     @abstractmethod
-    def primitive_compare(self) -> List[T]:
+    def in_order(self) -> List[T]:
         pass
 
     """

@@ -1,25 +1,58 @@
 from __future__ import annotations
-from enum import Enum
+from typing import Optional
 from CORE_Algorithms.TreeTraversal.BinaryTreeImpl import BinaryTree, BinaryTreeImpl
 from CORE_Algorithms.ReversePolishNotation.ReversePolishNotation import operators
-
-
-class Notation(Enum):
-    prefix = 1,
-    infix = 2,
-    postfix = 3
-
-
-class ExpressionNode:
-    __id: int
-    __op: str
-
-    def is_to_left(self, other: ExpressionNode) -> bool:
-        return self.__id < other.__id
+from CORE_Algorithms.Stack.StackImpl import Stack, StackImpl
 
 
 class ArithmeticExpression:
-    __expression_tree: BinaryTree[ExpressionNode]
+    __raw_expression: str
+    __expression_tree: BinaryTree[str]
 
     def __init__(self, expression: str):
-        self.__expression_tree = BinaryTreeImpl[ExpressionNode](lambda x, y: x.is_to_left(y))
+        self.__raw_expression = expression
+        my_stack: Stack[BinaryTree[str]] = StackImpl()
+        my_tree: Optional[BinaryTree[str]] = BinaryTreeImpl[str]()
+        for c in expression:
+            if c == "(":
+                my_stack.push(my_tree)
+                if my_tree.get_left() is None:
+                    my_tree = my_tree.set_left(None)
+                elif my_tree.get_right() is None:
+                    my_tree = my_tree.set_right(None)
+                else:
+                    raise Exception("Could not parse {} in expression {}"
+                                    .format(c, expression))
+            elif c == ")":
+                my_tree = my_stack.pop()
+                pass
+            elif c in operators:
+                my_tree.set_value(c)
+            else:
+                if my_tree.get_left() is None:
+                    my_tree.set_left(c)
+                elif my_tree.get_right() is None:
+                    my_tree.set_right(c)
+                else:
+                    raise Exception("Too many operands within brackets {} in expression {}"
+                                    .format(c, expression))
+        self.__expression_tree = my_tree.get_left()
+
+    def __repr__(self):
+        return "Raw Expression: {}, Prefix: {}, PostFix: {}\n\tTree: {}".format(
+            self.__raw_expression,
+            self.prefix(),
+            self.postfix(),
+            self.__expression_tree)
+
+    def prefix(self) -> str:
+        expression: str = ""
+        for c in self.__expression_tree.pre_order():
+            expression += c
+        return expression
+
+    def postfix(self) -> str:
+        expression: str = ""
+        for c in self.__expression_tree.post_order():
+            expression += c
+        return expression

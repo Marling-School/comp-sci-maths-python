@@ -3,15 +3,20 @@ from typing import List
 from CORE_Algorithms.TreeTraversal.BinaryTreeImpl import BinaryTree, BinaryTreeImpl
 
 
-def str_is_to_left(a: str, b: str) -> bool:
-    return a < b
+def str_compare(a: str, b: str) -> int:
+    if a < b:
+        return 1
+    elif a > b:
+        return -1
+    else:
+        return 0
 
 
 class TestBinaryTree(unittest.TestCase):
     __my_tree: BinaryTree[str]
 
     def setUp(self) -> None:
-        self.__my_tree = BinaryTreeImpl(str_is_to_left)
+        self.__my_tree = BinaryTreeImpl(str_compare)
 
         self.__my_tree.add('B')
         self.__my_tree.add('A')
@@ -25,7 +30,7 @@ class TestBinaryTree(unittest.TestCase):
 
     def test_pre_order(self):
         print("Pre Order Test")
-        copy_tree: BinaryTree[str] = BinaryTreeImpl(str_is_to_left)
+        copy_tree: BinaryTree[str] = BinaryTreeImpl(str_compare)
         for v in self.__my_tree.pre_order():
             copy_tree.add(v)
             print(v, end=", ")
@@ -36,9 +41,9 @@ class TestBinaryTree(unittest.TestCase):
         print(self.__my_tree)
         self.assertEqual(self.__my_tree, copy_tree)
 
-    def test_primitive_compare(self):
+    def test_in_order(self):
         print("In Order Test")
-        traversed: List[str] = self.__my_tree.primitive_compare()
+        traversed: List[str] = self.__my_tree.in_order()
         last: str or None = None
         order_checked: int = 0
         for v in traversed:

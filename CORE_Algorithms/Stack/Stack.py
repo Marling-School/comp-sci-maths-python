@@ -23,3 +23,7 @@ class Stack(Generic[T], ABC):
     @abstractmethod
     def is_empty(self) -> bool:
         pass
+
+    @abstractmethod
+    def size(self) -> int:
+        pass

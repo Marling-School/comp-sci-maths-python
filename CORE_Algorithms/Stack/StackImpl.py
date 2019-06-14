@@ -22,6 +22,9 @@ class StackImpl(Stack[T]):
     def is_empty(self) -> bool:
         return len(self.__data) is 0
 
+    def size(self) -> int:
+        return len(self.__data)
+
     __data: List[T]
 
     def __init__(self):
