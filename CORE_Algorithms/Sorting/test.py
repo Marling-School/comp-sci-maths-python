@@ -3,7 +3,7 @@ from typing import List, Optional
 from random import randint
 from CORE_Algorithms.Sorting.bubble_sort import bubble_sort
 from CORE_Algorithms.Sorting.merge_sort import merge_sort
-from CORE_Algorithms.Sorting.common import SortFunction, in_order, reverse_order
+from CORE_Algorithms.Sorting.common import SortFunction, primitive_compare, primitive_reverse_compare
 from CORE_Algorithms.Sorting.Person import Person, compare_name, compare_age
 
 
@@ -13,8 +13,8 @@ class TestSortFunctions(unittest.TestCase):
     def test_numbers(self):
         for sort_function in self.__sort_functions:
             my_list: List[int] = [4, 5, 3, 1, 9, 8]
-            my_sorted_list: List[int] = sort_function(my_list, in_order)
-            my_reversed_list: List[int] = sort_function(my_list, reverse_order)
+            my_sorted_list: List[int] = sort_function(my_list, primitive_compare)
+            my_reversed_list: List[int] = sort_function(my_list, primitive_reverse_compare)
     
             print("Integers: {}\nInput: {}\nSorted: {}\nReversed: {}".format(
                 sort_function.__name__, my_list, my_sorted_list, my_reversed_list))
@@ -24,8 +24,8 @@ class TestSortFunctions(unittest.TestCase):
     def test_string(self):
         for sort_function in self.__sort_functions:
             my_list: List[str] = ["Bravo", "Delta", "Charlie", "Alpha", "Echo", "Sierra", "Foxtrot"]
-            my_sorted_list: List[str] = sort_function(my_list, in_order)
-            my_reversed_list: List[str] = sort_function(my_list, reverse_order)
+            my_sorted_list: List[str] = sort_function(my_list, primitive_compare)
+            my_reversed_list: List[str] = sort_function(my_list, primitive_reverse_compare)
             print("Strings: {}\nInput: {}\nSorted: {}\nReversed: {}".format(
                 sort_function.__name__, my_list, my_sorted_list, my_reversed_list))
             self.assertEqual(
@@ -38,7 +38,7 @@ class TestSortFunctions(unittest.TestCase):
     def test_random(self):
         for sort_function in self.__sort_functions:
             my_list: List[int] = [randint(0, 100) for i in range(100)]
-            my_sorted_list: List[int] = sort_function(my_list, in_order)
+            my_sorted_list: List[int] = sort_function(my_list, primitive_compare)
 
             print("Random Numbers: {}\nInput: {}\nSorted: {}".format(
                 sort_function.__name__, my_list, my_sorted_list))

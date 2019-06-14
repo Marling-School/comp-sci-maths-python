@@ -7,13 +7,13 @@ T = TypeVar('T', str, int, float)
 
 
 class BinaryTreeImpl(BinaryTree[T]):
-    __is_to_left: Callable[[T, T], bool]
+    __compare: Callable[[T, T], bool]
     __value: T or None
     __left_branch: BinaryTree[T] or None
     __right_branch: BinaryTree[T] or None
 
-    def __init__(self, is_to_left: Callable[[T, T], bool], value: T = None):
-        self.__is_to_left = is_to_left
+    def __init__(self, compare: Callable[[T, T], bool], value: T = None):
+        self.__compare = compare
         self.__value = value
         self.__left_branch = None
         self.__right_branch = None
@@ -29,16 +29,16 @@ class BinaryTreeImpl(BinaryTree[T]):
     def add(self, item: T):
         if self.__value is None:
             self.__value = item
-        elif self.__is_to_left(item, self.__value):
+        elif self.__compare(item, self.__value) == 1:
             if self.__left_branch:
                 self.__left_branch.add(item)
             else:
-                self.__left_branch = BinaryTreeImpl(self.__is_to_left, item)
+                self.__left_branch = BinaryTreeImpl(self.__compare, item)
         else:
             if self.__right_branch:
                 self.__right_branch.add(item)
             else:
-                self.__right_branch = BinaryTreeImpl(self.__is_to_left, item)
+                self.__right_branch = BinaryTreeImpl(self.__compare, item)
 
     def get_right(self) -> BinaryTree[T] or None:
         return self.__right_branch
@@ -57,13 +57,13 @@ class BinaryTreeImpl(BinaryTree[T]):
             nodes.extend(self.__right_branch.pre_order())
         return nodes
 
-    def in_order(self) -> List[T]:
+    def primitive_compare(self) -> List[T]:
         nodes: List[T] = []
         if self.__left_branch is not None:
-            nodes.extend(self.__left_branch.in_order())
+            nodes.extend(self.__left_branch.primitive_compare())
         nodes.append(self.__value)
         if self.__right_branch is not None:
-            nodes.extend(self.__right_branch.in_order())
+            nodes.extend(self.__right_branch.primitive_compare())
         return nodes
 
     def post_order(self) -> List[T]:

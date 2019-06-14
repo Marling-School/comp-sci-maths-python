@@ -1,3 +1,5 @@
+from CORE_Algorithms.Sorting.common import primitive_compare
+
 class Person:
     """"
     This class is used to test that custom comparators work with sorting objects
@@ -21,18 +23,8 @@ class Person:
 
 # Sort Functions for Person objects
 def compare_name(x: Person, y: Person) -> int:
-    if x.get_name() == y.get_name():
-        return 0
-    elif x.get_name() < y.get_name():
-        return 1
-    else:
-        return -1
+    return primitive_compare(x.get_name(), y.get_name())
 
 
 def compare_age(x: Person, y: Person) -> int:
-    if x.get_age() == y.get_age():
-        return 0
-    elif x.get_age() < y.get_age():
-        return 1
-    else:
-        return -1
+    return primitive_compare(x.get_age(), y.get_age())

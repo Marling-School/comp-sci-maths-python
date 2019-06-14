@@ -51,7 +51,7 @@ class BinaryTree(Generic[T], ABC):
     Return a list of nodes using in-order traversal
     """
     @abstractmethod
-    def in_order(self) -> List[T]:
+    def primitive_compare(self) -> List[T]:
         pass
 
     """

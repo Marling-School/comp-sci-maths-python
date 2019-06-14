@@ -36,9 +36,9 @@ class TestBinaryTree(unittest.TestCase):
         print(self.__my_tree)
         self.assertEqual(self.__my_tree, copy_tree)
 
-    def test_in_order(self):
+    def test_primitive_compare(self):
         print("In Order Test")
-        traversed: List[str] = self.__my_tree.in_order()
+        traversed: List[str] = self.__my_tree.primitive_compare()
         last: str or None = None
         order_checked: int = 0
         for v in traversed:
