@@ -7,6 +7,7 @@ from CORE_Algorithms.Searching.common import \
     NO_MATCH
 
 
+# noinspection PyUnusedLocal
 def linear_search(input_list: List[Searchable],
                   criteria: Criteria,
                   match: MatchFunction,

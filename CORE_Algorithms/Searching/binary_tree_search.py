@@ -20,10 +20,16 @@ def binary_tree_search(input_list: List[Searchable],
     tree_node: BinaryTree[Tuple[int, Searchable]] = \
         BinaryTreeImpl[Tuple[int, Searchable]](lambda x, y: compare(x[1], y[1]))
     for index, item in enumerate(input_list):
+        # noinspection PyTypeChecker
         tree_node.add((index, item))
 
     while tree_node is not None:
-        if match(criteria, tree_node.get_value()[1]):
+        comparison: int = match(criteria, tree_node.get_value()[1])
+        if comparison == 0:
             return tree_node.get_value()[0]
+        elif comparison == 1:
+            tree_node = tree_node.get_left()
+        else:
+            tree_node = tree_node.get_right()
 
     return NO_MATCH

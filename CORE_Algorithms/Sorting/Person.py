@@ -1,5 +1,6 @@
 from CORE_Algorithms.Sorting.common import primitive_compare
 
+
 class Person:
     """"
     This class is used to test that custom comparators work with sorting objects
@@ -28,3 +29,4 @@ def compare_name(x: Person, y: Person) -> int:
 
 def compare_age(x: Person, y: Person) -> int:
     return primitive_compare(x.get_age(), y.get_age())
+
