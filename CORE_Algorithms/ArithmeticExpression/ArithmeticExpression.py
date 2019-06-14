@@ -14,7 +14,9 @@ class ArithmeticExpression:
         my_stack: Stack[BinaryTree[str]] = StackImpl()
         my_tree: Optional[BinaryTree[str]] = BinaryTreeImpl[str]()
         for c in expression:
-            if c == "(":
+            if c == " ":
+                pass  # Just ignore spaces
+            elif c == "(":
                 my_stack.push(my_tree)
                 if my_tree.get_left() is None:
                     my_tree = my_tree.set_left(None)

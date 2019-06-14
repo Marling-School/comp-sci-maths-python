@@ -9,7 +9,7 @@ class TestArithmeticExpression(unittest.TestCase):
         print("My Expression: {}".format(my_expression))
 
     def test_complex_1(self):
-        my_expression: ArithmeticExpression = ArithmeticExpression("((A+B)*(C-D))")
+        my_expression: ArithmeticExpression = ArithmeticExpression("((A + B) * (C - D))")
         print("My Expression: {}".format(my_expression))
         rpn: ReversePolishNotation = ReversePolishNotation(my_expression.postfix())
 
