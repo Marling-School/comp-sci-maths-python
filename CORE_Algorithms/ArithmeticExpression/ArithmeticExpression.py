@@ -1,6 +1,7 @@
 from __future__ import annotations
 from enum import Enum
 from CORE_Algorithms.TreeTraversal.BinaryTreeImpl import BinaryTree, BinaryTreeImpl
+from CORE_Algorithms.ReversePolishNotation.ReversePolishNotation import operators
 
 
 class Notation(Enum):
@@ -9,16 +10,9 @@ class Notation(Enum):
     postfix = 3
 
 
-class Operator(Enum):
-    add = '+',
-    subtract = '-',
-    multiply = '*',
-    divide = '/'
-
-
 class ExpressionNode:
     __id: int
-    __op: Operator | float | int
+    __op: str
 
     def is_to_left(self, other: ExpressionNode) -> bool:
         return self.__id < other.__id
