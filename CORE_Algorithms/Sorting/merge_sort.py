@@ -25,21 +25,24 @@ def merge_sort_recurse(input_list: List[Sortable],
     if left_pointer == right_pointer:
         return [input_list[left_pointer]]
 
-    # Calculate the middle and recurse the sort for both halves
+    # Calculate the mid point
     middle: int = floor((left_pointer + right_pointer) / 2)
+
+    # Recurse sort both halves to yield two lists to merge
     first_half: List[Sortable] = merge_sort_recurse(input_list, comparator, left_pointer, middle)
     second_half: List[Sortable] = merge_sort_recurse(input_list, comparator, middle + 1, right_pointer)
 
     # Merge the two halves into a single sorted list
     output_list: List[Sortable] = []
     while (len(first_half) > 0) and (len(second_half) > 0):
+        # Comparator returns -1 if the first item is 'larger than' the first
         comparison: int = comparator(first_half[0], second_half[0])
         if comparison < 0:
             output_list.append(second_half.pop(0))
         else:
             output_list.append(first_half.pop(0))
 
-    # Push any stragglers from the list with items remaining
+    # Push any stragglers from whichever list has items remaining
     output_list.extend(first_half)
     output_list.extend(second_half)
 
