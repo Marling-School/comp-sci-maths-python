@@ -5,7 +5,7 @@ State = TypeVar('State')
 Alphabet = TypeVar('Alphabet')
 
 
-class FSMTemplate(Generic[State, Alphabet]):
+class FSMConfig(Generic[State, Alphabet]):
     """
     Encapsulates the rules of a given state machine. Once the rules are established
     machine runners can be created to process inputs.
@@ -56,7 +56,7 @@ class FSMTemplate(Generic[State, Alphabet]):
                         start_state: State,
                         input_char: Alphabet,
                         end_state: State,
-                        output_char: Optional[Alphabet] = None) -> FSMTemplate:
+                        output_char: Optional[Alphabet] = None) -> FSMConfig:
         """
         Register transition rules with this Finite State Machine.
         All of the rules should be registered before runners are created and used.

@@ -1,5 +1,5 @@
 from typing import Generic, Iterable, Callable, Tuple
-from CORE_TheoryOfComputation.FiniteStateMachine.FSMTemplate import FSMTemplate, Alphabet, State
+from CORE_TheoryOfComputation.FiniteStateMachine.FSMConfig import FSMConfig, Alphabet, State
 
 
 class MealyMachine(Generic[State, Alphabet]):
@@ -7,14 +7,14 @@ class MealyMachine(Generic[State, Alphabet]):
     An instance of this class is created to process an input with a given state machine.
     It tracks the state as input is processed.
     """
-    __machine: FSMTemplate[State, Alphabet]  # The machine that governs our behaviour
+    __machine: FSMConfig[State, Alphabet]  # The machine that governs our behaviour
     __state: State  # The current state of this instance
     __output_callback: Callable[[Alphabet], None]  # The callback for output alphabet as received
 
     def __init__(self,
-                 machine: FSMTemplate[State, Alphabet],
+                 machine: FSMConfig[State, Alphabet],
                  output_callback: Callable[[Alphabet], None]):
-        self.__machine = machine;
+        self.__machine = machine
         self.__state = machine.get_start_state()
         self.__output_callback = output_callback
 
