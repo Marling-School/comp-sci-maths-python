@@ -1,62 +1,35 @@
 from __future__ import annotations
-from typing import Set, Dict
+from typing import Set, Dict, Generic, TypeVar, Tuple, Optional
+
+State = TypeVar('State')
+Alphabet = TypeVar('Alphabet')
 
 
-class FSMRunner:
-    """
-    An instance of this class is created to process an input with a given state machine.
-    It tracks the state as input is processed.
-    """
-    __machine: FiniteStateMachine  # The machine that governs our behaviour
-    __state: str  # The current state of this instance
-
-    def __init__(self, machine: FiniteStateMachine):
-        self.__machine = machine;
-        self.__state = machine.get_start_state()
-
-    def process(self, input_str: str) -> bool:
-        """
-        Given an input, it puts each character through the machine,
-        iterating the state according to the transition rules.
-        This function can be called repeatedly, which should allow it to work with streaming inputs.
-        :param input_str: The next portion of the input string
-        :return: Returns bool to indicate if the state at the end of this input is still valid.
-        """
-        for c in input_str:
-            self.__state = self.__machine.get_next_state(self.__state, c)
-
-        return self.is_state_valid()
-
-    def get_state(self) -> str:
-        return self.__state
-
-    def is_state_valid(self) -> bool:
-        return self.__machine.is_state_valid(self.__state)
-
-
-class FiniteStateMachine:
+class FiniteStateMachine(Generic[State, Alphabet]):
     """
     Encapsulates the rules of a given state machine. Once the rules are established
     machine runners can be created to process inputs.
     """
-    __start_state: str  # the start state of a new instance of the machine
-    __all_states: Set[str]  # All the known states for the machine
-    __valid_end_states: Set[str]  # All the valid end states for the machine
-    __alphabet: Set[str]  # The set of know input characters
+    __start_state: State  # the start state of a new instance of the machine
+    __all_states: Set[State]  # All the known states for the machine
+    __valid_end_states: Set[State]  # All the valid end states for the machine
+    __alphabet: Set[Alphabet]  # The set of know input characters
 
     # The registry of all the transition rules, keyed by start state, sub key by input char
-    __transitions: Dict[str, Dict[str, str]]
+    __transitions: Dict[State, Dict[Alphabet, Tuple[State, Alphabet]]]
 
     def __init__(self,
-                 start_state: str,
-                 all_states: Set[str],
-                 valid_end_states: Set[str],
-                 alphabet: Set[str]):
+                 start_state: State,
+                 all_states: Set[State],
+                 alphabet: Set[Alphabet],
+                 valid_end_states=None):
         # Validate that the start state is within the known states
         if start_state not in all_states:
             raise Exception("Start state not included in all states")
 
         # Validate that the end states are a subset of all the known states
+        if valid_end_states is None:
+            valid_end_states = set()
         if not valid_end_states.issubset(all_states):
             raise Exception("Valid end states {} is not a subset of all states {}".format(
                 valid_end_states,
@@ -70,16 +43,27 @@ class FiniteStateMachine:
         self.__alphabet = alphabet
         self.__transitions = dict()
 
+    def __repr__(self):
+        return "FSM - States: {}, Start: {}, Valid Ends: {}, Alphabet: {}, Transitions: {}".format(
+            self.__all_states,
+            self.__start_state,
+            self.__valid_end_states,
+            self.__alphabet,
+            self.__transitions
+        )
+
     def with_transition(self,
-                        start_state: str,
-                        input_char: str,
-                        end_state: str) -> FiniteStateMachine:
+                        start_state: State,
+                        input_char: Alphabet,
+                        end_state: State,
+                        output_char: Optional[Alphabet] = None) -> FiniteStateMachine:
         """
         Register transition rules with this Finite State Machine.
         All of the rules should be registered before runners are created and used.
         :param start_state: The start state for the transition being defined
         :param input_char: The alphabet character to look for
         :param end_state: The end state for the transition being defined
+        :param output_char: Optional output character to spit out for this transition, used for mealy machines
         :return: Instance of self, so we can use method chaining
         """
         # Validate the start and end states against the list of known states
@@ -100,7 +84,7 @@ class FiniteStateMachine:
             self.__transitions[start_state] = dict()
 
         # Retrieve the transition rules for this start state
-        transitions: Dict[str] = self.__transitions[start_state]
+        transitions: Dict[Alphabet] = self.__transitions[start_state]
 
         # Validate that we do not already have a rule defined for this input char
         if input_char in transitions:
@@ -111,7 +95,7 @@ class FiniteStateMachine:
             ))
 
         # Register the end state for this combination
-        transitions[input_char] = end_state
+        transitions[input_char] = (end_state, output_char)
 
         return self
 
@@ -122,13 +106,13 @@ class FiniteStateMachine:
         """
         return self.__start_state
 
-    def get_next_state(self, start_state: str, input_char: str) -> str:
+    def get_next_tuple(self, start_state: State, input_char: Alphabet) -> Tuple[State, Alphabet]:
         """
-        Given a start state and input character, this calculates the next state.
+        Given a start state and input character, this calculates the next tuple from our state transitions.
 
         :param start_state: The starting state for this transition
         :param input_char: The character to process
-        :return: The next state from the machine
+        :return: The tuple containing the next state and next output value
         :raise Exception:
             If the start state is not in list of known states
             If the input_char is not in the alphabet
@@ -154,7 +138,7 @@ class FiniteStateMachine:
             raise Exception("No transitions defined for {}".format(start_state))
 
         # Locate those transitions
-        transitions: Dict[str] = self.__transitions[start_state]
+        transitions: Dict[State, Tuple[State, Alphabet]] = self.__transitions[start_state]
 
         # Validate that we have a transition rule defined for this specific input char
         if input_char not in transitions:
@@ -163,10 +147,20 @@ class FiniteStateMachine:
                 input_char
             ))
 
-        # Return the new state
+        # Return the new state, just return the
         return transitions[input_char]
 
-    def is_state_valid(self, state: str):
+    def get_next_state(self, start_state: State, input_char: Alphabet) -> Alphabet:
+        """
+        Given a start state and input character, this calculates the next state from the transition rules
+
+        :param start_state: The starting state for this transition
+        :param input_char: The character to process
+        :return: The next state from the machine
+        """
+        return self.get_next_tuple(start_state, input_char)[0]
+
+    def is_state_valid(self, state: State):
         """
         Validate a state against the list of valid end states.
         :param state: The state to validate
@@ -179,18 +173,3 @@ class FiniteStateMachine:
                 self.__all_states))
         return state in self.__valid_end_states
 
-    def create_instance(self) -> FSMRunner:
-        """
-        Create a runner for a finite state machine, a runner should be created for each input that needs processing.
-        This FSM class itself acts as a template for runners.
-        :return: New instance of FSM Runner
-        """
-        return FSMRunner(self)
-
-    def process(self, input_str: str) -> bool:
-        """
-        convenience function to create a new instance and process in one go
-        :param input_str: The input to process
-        :return: If the input left the FSM in a valid state
-        """
-        return FSMRunner(self).process(input_str)
