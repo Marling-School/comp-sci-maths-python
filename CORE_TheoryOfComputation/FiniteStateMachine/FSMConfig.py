@@ -3,25 +3,33 @@ from typing import Set, Dict, Generic, TypeVar, Tuple, Optional
 
 State = TypeVar('State')
 Alphabet = TypeVar('Alphabet')
+Transition = TypeVar('Transition')
+TransitionInfo = Tuple[State, Transition]
+TransitionsByInputChar = Dict[Alphabet, TransitionInfo]
 
 
-class FSMConfig(Generic[State, Alphabet]):
+class FSMConfig(Generic[State, Alphabet, Transition]):
     """
     Encapsulates the rules of a given state machine. Once the rules are established
     machine runners can be created to process inputs.
+    State = The data type for the states
+    Alphabet = The data type for the alphabet
+    Transition = The data type for any additional transition info
     """
     __start_state: State  # the start state of a new instance of the machine
     __all_states: Set[State]  # All the known states for the machine
     __valid_end_states: Set[State]  # All the valid end states for the machine
     __alphabet: Set[Alphabet]  # The set of know input characters
+    __is_deterministic: bool  # Indicates if the machine should be deterministic
 
     # The registry of all the transition rules, keyed by start state, sub key by input char
-    __transitions: Dict[State, Dict[Alphabet, Tuple[State, Alphabet]]]
+    __transitions: Dict[State, TransitionsByInputChar]
 
     def __init__(self,
                  start_state: State,
                  all_states: Set[State],
                  alphabet: Set[Alphabet],
+                 is_deterministic: bool,
                  valid_end_states=None):
         # Validate that the start state is within the known states
         if start_state not in all_states:
@@ -42,28 +50,34 @@ class FSMConfig(Generic[State, Alphabet]):
         self.__valid_end_states = valid_end_states
         self.__alphabet = alphabet
         self.__transitions = dict()
+        self.__is_deterministic = is_deterministic
 
     def __repr__(self):
-        return "FSM - States: {}, Start: {}, Valid Ends: {}, Alphabet: {}, Transitions: {}".format(
+        transitions_str: str = ""
+        for from_state, transitions in self.__transitions.items():
+            for input_char, transition in transitions.items():
+                transitions_str += "\n\t{}, {} -> {}".format(from_state, input_char, transition)
+
+        return "FSM\n\tStates: {}\n\tStart: {}\n\tValid Ends: {}\n\tAlphabet: {}\n\tTransitions: {}".format(
             self.__all_states,
             self.__start_state,
             self.__valid_end_states,
             self.__alphabet,
-            self.__transitions
+            transitions_str
         )
 
     def with_transition(self,
                         start_state: State,
                         input_char: Alphabet,
                         end_state: State,
-                        output_char: Optional[Alphabet] = None) -> FSMConfig:
+                        transition_info: Optional[Transition] = None) -> FSMConfig:
         """
         Register transition rules with this Finite State Machine.
         All of the rules should be registered before runners are created and used.
         :param start_state: The start state for the transition being defined
         :param input_char: The alphabet character to look for
         :param end_state: The end state for the transition being defined
-        :param output_char: Optional output character to spit out for this transition, used for mealy machines
+        :param transition_info: Additional information about the transition, used for Mealy Machines and Turing Machines
         :return: Instance of self, so we can use method chaining
         """
         # Validate the start and end states against the list of known states
@@ -95,7 +109,7 @@ class FSMConfig(Generic[State, Alphabet]):
             ))
 
         # Register the end state for this combination
-        transitions[input_char] = (end_state, output_char)
+        transitions[input_char] = (end_state, transition_info)
 
         return self
 
@@ -106,7 +120,9 @@ class FSMConfig(Generic[State, Alphabet]):
         """
         return self.__start_state
 
-    def get_next_tuple(self, start_state: State, input_char: Alphabet) -> Tuple[State, Alphabet]:
+    def get_next_tuple(self,
+                       start_state: State,
+                       input_char: Alphabet) -> Optional[Tuple[State, Transition]]:
         """
         Given a start state and input character, this calculates the next tuple from our state transitions.
 
@@ -135,32 +151,28 @@ class FSMConfig(Generic[State, Alphabet]):
 
         # Validate that we have transitions defined for this start state
         if start_state not in self.__transitions:
-            raise Exception("No transitions defined for {}".format(start_state))
+            if self.__is_deterministic:
+                raise Exception("No transitions defined for {}".format(start_state))
+            else:
+                return None
 
         # Locate those transitions
         transitions: Dict[State, Tuple[State, Alphabet]] = self.__transitions[start_state]
 
         # Validate that we have a transition rule defined for this specific input char
         if input_char not in transitions:
-            raise Exception("No transition defined for {} with character {}".format(
-                start_state,
-                input_char
-            ))
+            if self.__is_deterministic:
+                raise Exception("No transition defined for {} with character {}".format(
+                    start_state,
+                    input_char
+                ))
+            else:
+                return None
 
         # Return the new state, just return the
         return transitions[input_char]
 
-    def get_next_state(self, start_state: State, input_char: Alphabet) -> Alphabet:
-        """
-        Given a start state and input character, this calculates the next state from the transition rules
-
-        :param start_state: The starting state for this transition
-        :param input_char: The character to process
-        :return: The next state from the machine
-        """
-        return self.get_next_tuple(start_state, input_char)[0]
-
-    def is_state_valid(self, state: State):
+    def is_valid_end_state(self, state: State):
         """
         Validate a state against the list of valid end states.
         :param state: The state to validate
