@@ -8,7 +8,7 @@ from CORE_TheoryOfComputation.FiniteStateMachine.TuringMachine import Direction,
 directions: Dict[str, Direction] = {
     ">": Direction.MOVE_RIGHT,
     "<": Direction.MOVE_LEFT,
-    "_": Direction.NO_MOVE
+    "-": Direction.NO_MOVE
 }
 
 

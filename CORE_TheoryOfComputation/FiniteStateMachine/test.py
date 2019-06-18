@@ -167,22 +167,69 @@ class TestFiniteStateMachines(unittest.TestCase):
             ))
             self.assertEqual(expected_output, is_valid)
 
-    def test_turing_machine_parsed(self):
+    def test_turing_machine_parsed_dec_to_bin(self):
         fsm: Optional[FSMConfig] = None
         with open("./turing_machines/decimal_to_binary.txt") as f:
             fsm = parse_turing_machine(list(f))
 
         print("Turing Machine to Convert Decimal to Binary")
         print(fsm)
-        test_cases: List[Tuple[str, bool]] = [
-            ("45", True),
+        test_cases: List[Tuple[str, bool, str]] = [
+            ("45", True, "101101"),
         ]
-        for an_input, expected_output in test_cases:
+        for an_input, expect_accepted, expected_output in test_cases:
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
-            an_output, is_valid, num_steps = machine.process(callback=lambda x: print(x))
+            an_output, is_accepted, num_steps = machine.process(callback=lambda x: print(x))
             an_output_str: str = "".join([c for c in an_output if c is not None])
-            print("Test Input {}, expected {}, received ({}, {}), steps: {}".format(
-                an_input, expected_output, an_output_str, is_valid, num_steps
+            print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
+                an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
             ))
-            self.assertEqual(expected_output, is_valid)
+            self.assertEqual(expect_accepted, is_accepted)
+            if expect_accepted:
+                self.assertEqual(expected_output, an_output_str)
+
+    def test_turing_machine_parsed_duplicate_mirror(self):
+        fsm: Optional[FSMConfig] = None
+        with open("./turing_machines/duplicate_binary_string.txt") as f:
+            fsm = parse_turing_machine(list(f))
+
+        print("Turing Machine to Duplicate a Binary String (mirror)")
+        print(fsm)
+        test_cases: List[Tuple[str, bool, str]] = [
+            ("01001", True, "0100110010"),
+        ]
+        for an_input, expect_accepted, expected_output in test_cases:
+            an_input_list = [c for c in an_input]
+            machine: TuringMachine = TuringMachine(fsm, an_input_list)
+            an_output, is_accepted, num_steps = machine.process(callback=lambda x: print(x))
+            an_output_str: str = "".join([c for c in an_output if c is not None])
+            print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
+                an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
+            ))
+            self.assertEqual(expect_accepted, is_accepted)
+            if expect_accepted:
+                self.assertEqual(expected_output, an_output_str)
+
+    def test_turing_machine_parsed_binary_palindrome(self):
+        fsm: Optional[FSMConfig] = None
+        with open("./turing_machines/binary_palindrome.txt") as f:
+            fsm = parse_turing_machine(list(f))
+
+        print("Turing Machine to Duplicate a Binary String (mirror)")
+        print(fsm)
+        test_cases: List[Tuple[str, bool, str]] = [
+            ("01001", False, ""),
+            ("10011001", True, ""),
+        ]
+        for an_input, expect_accepted, expected_output in test_cases:
+            an_input_list = [c for c in an_input]
+            machine: TuringMachine = TuringMachine(fsm, an_input_list)
+            an_output, is_accepted, num_steps = machine.process(callback=lambda x: print(x))
+            an_output_str: str = "".join([c for c in an_output if c is not None])
+            print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
+                an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
+            ))
+            self.assertEqual(expect_accepted, is_accepted)
+            if expect_accepted:
+                self.assertEqual(expected_output, an_output_str)
