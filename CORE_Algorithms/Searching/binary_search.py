@@ -1,6 +1,6 @@
 from typing import Optional, List, Tuple
 from math import floor
-from CORE_Algorithms.Sorting.bubble_sort import bubble_sort
+from CORE_Algorithms.Sorting.merge_sort import merge_sort
 from CORE_Algorithms.Searching.common import \
     Searchable, \
     Criteria, \
@@ -19,7 +19,7 @@ def binary_search(input_list: List[Searchable],
     """
     # Create a list of tuples that preserve the original index of the value with the value itself
     tuple_list: List[Tuple[int, Searchable]] = [(idx, item) for idx, item in enumerate(input_list)]
-    sorted_list: List[Tuple[int, Searchable]] = bubble_sort(tuple_list, lambda x, y: compare(x[1], y[1]))
+    sorted_list: List[Tuple[int, Searchable]] = merge_sort(tuple_list, lambda x, y: compare(x[1], y[1]))
 
     # Calculate initial values of lowest/highest pointers to encapsulate whole list
     lowest_ptr: int = 0
