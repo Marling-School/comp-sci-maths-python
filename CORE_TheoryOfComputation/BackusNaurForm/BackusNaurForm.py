@@ -32,6 +32,62 @@ class BackusNaurForm:
                     as_str += "<{}>, ".format(value) if is_tag else "'{}',".format(value)
         return as_str
 
+    def __parse_alternative(self, alternative_str) -> Rule:
+        """
+        Given one of the expressions within a definition, parses the components of the rule.
+        :param alternative_str: The raw string
+        :return: The parsed Rule Parts list
+        """
+        # Work through character by character adding rule parts as various special chars are hit
+        # This could probably be done better with RegEx...
+        form: List[RulePart] = []
+        is_building_tag: bool = False
+        is_building_literal: bool = False
+        current_literal: str = ""
+        for c in alternative_str:
+            if c == "<":
+                # If we have any accumulated literal, just add as a literal part
+                if len(current_literal) > 0:
+                    form.append((False, current_literal))
+                    current_literal = ""
+
+                # Register the fact we are building a tag
+                is_building_tag = True
+            elif c == ">":
+                # If we aren't already building a tag, assume this close bracket is a literal
+                if not is_building_tag:
+                    current_literal = ">"
+                else:
+                    # Otherwise we can just close the tag and add the new tag rule part
+                    is_building_tag = False
+                    form.append((True, current_literal))
+                    current_literal = ""
+            elif c == "'":
+                # If we are not already within quotes, but have accumulated some literal value
+                # Add whatever value is accumulated as a literal and start again
+                if not is_building_literal:
+                    if len(current_literal) > 0:
+                        form.append((False, current_literal))
+                        current_literal = ""
+                # If we are building a literal, then this is assumed to close it
+                if is_building_literal:
+                    form.append((False, current_literal))
+                    current_literal = ""
+                is_building_literal = not is_building_literal
+            else:
+                # Any other character just gets appended to current literal
+                current_literal += c
+
+        # Any hanging literal should be added
+        if len(current_literal) > 0:
+            form.append((False, current_literal))
+
+        # Assume unterminated opening tag is due to opening tag actually being literal
+        if is_building_tag:
+            form.append((False, "<"))
+
+        return form
+
     def add_rule(self, rule_str: str) -> BackusNaurForm:
         """
         Add a line from a BNF definition to this definition
@@ -53,54 +109,7 @@ class BackusNaurForm:
 
         alternatives: List[Rule] = []
         for alternative_str in alternatives_str:
-            # Work through character by character adding rule parts as various special chars are hit
-            # This could probably be done better with RegEx...
-            form: List[RulePart] = []
-            is_building_tag: bool = False
-            is_building_literal: bool = False
-            current_literal: str = ""
-            for c in alternative_str:
-                if c == "<":
-                    # If we have any accumulated literal, just add as a literal part
-                    if len(current_literal) > 0:
-                        form.append((False, current_literal))
-                        current_literal = ""
-
-                    # Register the fact we are building a tag
-                    is_building_tag = True
-                elif c == ">":
-                    # If we aren't already building a tag, assume this close bracket is a literal
-                    if not is_building_tag:
-                        current_literal = ">"
-                    else:
-                        # Otherwise we can just close the tag and add the new tag rule part
-                        is_building_tag = False
-                        form.append((True, current_literal))
-                        current_literal = ""
-                elif c == "'":
-                    # If we are not already within quotes, but have accumulated some literal value
-                    # Add whatever value is accumulated as a literal and start again
-                    if not is_building_literal:
-                        if len(current_literal) > 0:
-                            form.append((False, current_literal))
-                            current_literal = ""
-                    # If we are building a literal, then this is assumed to close it
-                    if is_building_literal:
-                        form.append((False, current_literal))
-                        current_literal = ""
-                    is_building_literal = not is_building_literal
-                else:
-                    # Any other character just gets appended to current literal
-                    current_literal += c
-
-            # Any hanging literal should be added
-            if len(current_literal) > 0:
-                form.append((False, current_literal))
-
-            # Assume unterminated opening tag is due to opening tag actually being literal
-            if is_building_tag:
-                form.append((False, "<"))
-
+            form: List[RulePart] = self.__parse_alternative(alternative_str)
             alternatives.append(form)
 
         self.__rules[rule_name] = alternatives
