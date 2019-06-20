@@ -11,7 +11,7 @@ class TestBNF(TestCase):
         print("Test Digit: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            ('6', 'digit'),
+            ('6', '<digit>'),
             ('458', None),
             ('X', None),
             ('JOE', None)
@@ -28,10 +28,10 @@ class TestBNF(TestCase):
         print("Test Integer: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            ('6', 'digit'),
-            ('458', 'integer'),
-            ('X', None),
-            ('JOE', None)
+            # ('6', '<digit>'),
+            ('458', '<integer>'),
+            # ('X', None),
+            # ('JOE', None)
         ]
 
         for test_input, expected_output in test_cases:
@@ -46,9 +46,9 @@ class TestBNF(TestCase):
         print("Test Real: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            ('6', 'digit'),
-            ('457', 'integer'),
-            ('3.567', 'real'),
+            ('6', '<digit>'),
+            ('457', '<integer>'),
+            ('3.567', '<real>'),
             ('X', None),
             ('JOE', None)
         ]
