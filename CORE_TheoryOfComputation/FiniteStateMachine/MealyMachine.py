@@ -26,7 +26,7 @@ class MealyMachine(Generic[State, Alphabet]):
         :param input_str: The next portion of the input string
         """
         for c in input_str:
-            next_tuple: Tuple[State, Alphabet] = self.__machine.get_next_tuple(self.__state, c)
+            next_tuple: Tuple[State, Alphabet] = self.__machine.get_transition_info(self.__state, c)
             self.__state = next_tuple[0]
             self.__output_callback(next_tuple[1])
 

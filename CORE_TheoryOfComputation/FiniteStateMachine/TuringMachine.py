@@ -71,7 +71,7 @@ class TuringMachine(Generic[State, Alphabet]):
 
             # Lookup the next transition information
             next_tuple: Tuple[State, Tuple[Alphabet, Direction]] = \
-                self.__machine.get_next_tuple(self.__state, current_input)
+                self.__machine.get_transition_info(self.__state, current_input)
 
             # If we do not have any transition information for this state/data value
             # Return an indication of the validity of the current state

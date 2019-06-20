@@ -23,7 +23,7 @@ class FSM(Generic[State, Alphabet]):
         :return: Returns bool to indicate if the state at the end of this input is still valid.
         """
         for c in input_str:
-            next_tuple: Tuple[Alphabet, None] = self.__machine.get_next_tuple(self.__state, c)
+            next_tuple: Tuple[Alphabet, None] = self.__machine.get_transition_info(self.__state, c)
             self.__state = next_tuple[0]
 
         return self.is_valid_end_state()

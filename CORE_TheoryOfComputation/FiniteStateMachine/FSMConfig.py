@@ -120,9 +120,9 @@ class FSMConfig(Generic[State, Alphabet, Transition]):
         """
         return self.__start_state
 
-    def get_next_tuple(self,
-                       start_state: State,
-                       input_char: Alphabet) -> Optional[Tuple[State, Transition]]:
+    def get_transition_info(self,
+                            start_state: State,
+                            input_char: Alphabet) -> Optional[Tuple[State, Transition]]:
         """
         Given a start state and input character, this calculates the next tuple from our state transitions.
 
