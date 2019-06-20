@@ -43,4 +43,4 @@ def generate_benchmark_csv(filename: str,
 
 
 tick_printer: TickPrinter = TickPrinter()
-generate_benchmark_csv('sorting_benchmark.csv', range(10, 3000, 100), lambda: tick_printer.tick())
+generate_benchmark_csv('sorting_benchmark.csv', range(250, 10000, 250), lambda: tick_printer.tick())

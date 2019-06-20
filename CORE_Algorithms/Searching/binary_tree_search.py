@@ -11,7 +11,7 @@ from CORE_Algorithms.TreeTraversal.BinaryTreeImpl import BinaryTree, BinaryTreeI
 def binary_tree_search(input_list: List[Searchable],
                        criteria: Criteria,
                        match: MatchFunction,
-                       compare: CompareFunction) -> Optional[Searchable]:
+                       compare: CompareFunction) -> int:
     """
     Searches through a list by putting all the items into a binary tree
     then navigating the tree until the item is found.

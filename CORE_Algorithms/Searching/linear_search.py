@@ -11,7 +11,7 @@ from CORE_Algorithms.Searching.common import \
 def linear_search(input_list: List[Searchable],
                   criteria: Criteria,
                   match: MatchFunction,
-                  compare: CompareFunction) -> Optional[Searchable]:
+                  compare: CompareFunction) -> int:
     """
     Searches through a list by comparing every item to the criteria.
     """
