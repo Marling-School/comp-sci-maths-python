@@ -11,7 +11,7 @@ class TestBNF(TestCase):
         print("Test Digit: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            ('6', '<digit>'),
+            ('6', 'digit'),
             ('458', None),
             ('X', None),
             ('JOE', None)
@@ -28,10 +28,10 @@ class TestBNF(TestCase):
         print("Test Integer: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            # ('6', '<digit>'),
-            ('458', '<integer>'),
-            # ('X', None),
-            # ('JOE', None)
+            ('6', 'digit'),
+            ('458', 'integer'),
+            ('X', None),
+            ('JOE', None)
         ]
 
         for test_input, expected_output in test_cases:
@@ -46,9 +46,9 @@ class TestBNF(TestCase):
         print("Test Real: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            ('6', '<digit>'),
-            ('457', '<integer>'),
-            ('3.567', '<real>'),
+            ('6', 'digit'),
+            ('457', 'integer'),
+            ('3.567', 'real'),
             ('X', None),
             ('JOE', None)
         ]
@@ -60,13 +60,16 @@ class TestBNF(TestCase):
     def test_expression(self):
         bnf: BackusNaurForm = BackusNaurForm()\
             .add_rule("<digit> ::= 0|1|2|3|4|5|6|7|8|9") \
-            .add_rule("<compare>::= < | > | <= | >= | == | !=")\
+            .add_rule("<integer> ::= <digit> | <digit><integer>")\
+            .add_rule("<compare>::= LT | GT | LTE | GTE | EQ | NEQ")\
             .add_rule("<bool>::= <integer> <compare> <integer>")
+            # .add_rule("<compare>::= < | > | <= | >= | == | !=")\
+            # .add_rule("<bool>::= <integer> <compare> <integer>")
         print("Test Expression: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            ('<', 'compare'),
-            ('4 < 5', 'bool'),
+            ('LT', 'compare'),
+            ('4 LT 5', 'bool'),
             ('X', None),
             ('JOE', None)
         ]

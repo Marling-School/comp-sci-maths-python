@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import List, Dict, Optional, Tuple
-from CORE_DataStructures.CircularQueue.CircularQueue import CircularQueue
+from CORE_Algorithms.Queue.QueueImpl import Queue, QueueImpl
 
 RulePart = Tuple[bool, str]
 Rule = List[RulePart]
@@ -30,7 +30,7 @@ class BackusNaurForm:
                 rule_str,
                 GIVEN_BY
             ))
-        rule_name: str = outer_parts[0]
+        rule_name: str = outer_parts[0].strip()[1:-1]
 
         # Separate out all the alternatives using the OR
         alternatives_str: List[str] = [x.strip() for x in outer_parts[1].split(OR)]
@@ -45,6 +45,7 @@ class BackusNaurForm:
                 if c == "<":
                     if len(current_literal) > 0:
                         form.append((False, current_literal))
+                        current_literal = ""
                     is_building_tag = True
                 elif c == ">":
                     if not is_building_tag:
@@ -56,7 +57,7 @@ class BackusNaurForm:
                     if not is_building_literal:
                         if len(current_literal) > 0:
                             form.append((False, current_literal))
-                        current_literal = ""
+                            current_literal = ""
                     if is_building_literal:
                         form.append((False, current_literal))
                         current_literal = ""
@@ -70,63 +71,66 @@ class BackusNaurForm:
         self.__rules[rule_name] = alternatives
         return self
 
-    def __check_match(self,
-                      input_str: str,
-                      rule: Rule,
-                      from_index: int,
-                      to_index: int) -> bool:
-        print("Checking Match of {} [{}:{}] against rule: {}".format(
-            input_str, from_index, to_index, rule
-        ))
+    def __check_value_against_rule_part(self,
+                                        input_str: str,
+                                        from_index: int,
+                                        to_index: int,
+                                        rule_part: RulePart) -> bool:
+        is_tag, rule_value = rule_part
+        if is_tag:
+            sub_rule_alternatives: List[Rule] = self.__rules[rule_value]
+            if sub_rule_alternatives is None or len(sub_rule_alternatives) == 0:
+                raise Exception("Cannot find any rules for {}".format(rule_value))
 
-        # Put all the rule parts on a queue
-        rule_parts_q: CircularQueue[RulePart] = CircularQueue(len(rule))
-        for rule_part in rule:
-            rule_parts_q.enqueue(rule_part)
+            for sub_rule in sub_rule_alternatives:
+                is_match: bool = self.__check_match(input_str, from_index, to_index, sub_rule)
+                if is_match:
+                    return True
 
-        # We we have elements to resolve
-        while not rule_parts_q.is_empty():
-            # Pick the next one
-            is_tag, rule_value = rule_parts_q.dequeue()
-            print("Checking {} [{}:{}] against {}, {}".format(input_str, from_index, to_index, is_tag, rule_value))
-
-            temp_to_index: int = to_index
-            while temp_to_index > from_index:
-                input_sub_str = input_str[from_index:temp_to_index]
-                if is_tag:
-                    sub_rule_alternatives: List[Rule] = self.__rules[rule_value]
-                    if sub_rule_alternatives is None or len(sub_rule_alternatives) == 0:
-                        raise Exception("Cannot find any rules for {}".format(rule_value))
-
-                    for sub_rule in sub_rule_alternatives:
-                        is_match: bool = self.__check_match(input_sub_str, sub_rule, from_index, temp_to_index)
-                        if is_match:
-                            print("Match Found {} - [{}:{}]".format(sub_rule, from_index, temp_to_index))
-                            if temp_to_index == to_index:
-                                return True
-                            from_index = temp_to_index
-                            break
-
-                else:
-                    print("Comparing Literal Rule: '{}' to Value: '{}'".format(rule_value, input_sub_str))
-                    # This is literal, just compare the value
-                    if rule_value == input_sub_str:
-                        print("Match Found [{}:{}]".format(from_index, temp_to_index))
-                        if temp_to_index == to_index:
-                            return True
-                        from_index = temp_to_index
-                        break
-
-                temp_to_index -= 1
-            print("Index Ran Out {} [{}:{}]".format(input_str, from_index, to_index))
+        else:
+            return rule_value == input_str[from_index:to_index]
 
         return False
 
-    def find_match(self, input_str: str) -> Optional[str]:
-        print("Find Match for {}".format(input_str))
+    def __check_match(self,
+                      input_str: str,
+                      from_index: int,
+                      to_index: int,
+                      rule: Rule) -> bool:
+        # Build a Queue of Rule Parts to satisfy
+        rule_part_q: Queue[RulePart] = QueueImpl()
+        for rule_part in rule:
+            rule_part_q.enqueue(rule_part)
 
+        # While there are rule parts to satisfy...
+        while not rule_part_q.is_empty():
+            rule_part = rule_part_q.dequeue()
+
+            # Match the rule part against as much of the remaining string as possible
+            temp_to_index: int = to_index
+            match_found: bool = False
+
+            # While there is any remaining string to try and match
+            while temp_to_index > from_index and not match_found:
+                # Attempt a match at this rule part
+                match: bool = self.__check_value_against_rule_part(input_str, from_index, temp_to_index, rule_part)
+                if match:
+                    # The next rule needs to match 'from' the end of the string we just matched against
+                    from_index = temp_to_index
+                    match_found = True
+                else:
+                    # Take one character off the end
+                    temp_to_index -= 1
+
+            if not match_found:
+                return False
+
+        # If we satisfied all the rule parts AND consumed the whole string, this is a match
+        return rule_part_q.is_empty() and from_index == to_index
+
+    def find_match(self, input_str: str) -> Optional[str]:
         for name, alternative_rules in self.__rules.items():
             for rule in alternative_rules:
-                if self.__check_match(input_str, rule, 0, len(input_str)):
+                if self.__check_match(input_str, 0, len(input_str), rule):
                     return name
         return None
