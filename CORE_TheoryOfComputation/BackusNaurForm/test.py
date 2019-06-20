@@ -61,15 +61,13 @@ class TestBNF(TestCase):
         bnf: BackusNaurForm = BackusNaurForm()\
             .add_rule("<digit> ::= 0|1|2|3|4|5|6|7|8|9") \
             .add_rule("<integer> ::= <digit> | <digit><integer>")\
-            .add_rule("<compare>::= LT | GT | LTE | GTE | EQ | NEQ")\
+            .add_rule("<compare>::= < | > | <= | >= | == | !=")\
             .add_rule("<bool>::= <integer> <compare> <integer>")
-            # .add_rule("<compare>::= < | > | <= | >= | == | !=")\
-            # .add_rule("<bool>::= <integer> <compare> <integer>")
         print("Test Expression: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
-            ('LT', 'compare'),
-            ('4 LT 5', 'bool'),
+            ('<', 'compare'),
+            ('4 < 5', 'bool'),
             ('X', None),
             ('JOE', None)
         ]
