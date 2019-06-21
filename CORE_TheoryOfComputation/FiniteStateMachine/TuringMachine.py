@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Generic, Optional, List, Tuple, Callable
 from enum import Enum
-from CORE_TheoryOfComputation.FiniteStateMachine.FSMConfig import FSMConfig, Alphabet, State
+from CORE_TheoryOfComputation.FiniteStateMachine.FiniteStateMachine import FiniteStateMachine, Alphabet, State
 
 
 class Direction(Enum):
@@ -27,13 +27,13 @@ class TuringMachine(Generic[State, Alphabet]):
     """
     An instance of this class is created to process a given starting state
     """
-    __machine: FSMConfig[State, Alphabet, TuringTransition]  # The machine that governs our behaviour
+    __machine: FiniteStateMachine[State, Alphabet, TuringTransition]  # The machine that governs our behaviour
     __state: State  # The current state of this instance
     __data: List[Optional[Alphabet]]
     __index: int
 
     def __init__(self,
-                 machine: FSMConfig[State, Alphabet, TuringTransition],
+                 machine: FiniteStateMachine[State, Alphabet, TuringTransition],
                  initial_data: List[Alphabet],
                  starting_index: int = 0):
         self.__machine = machine

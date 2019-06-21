@@ -1,16 +1,15 @@
 from typing import Generic, Iterable, Tuple
-from CORE_TheoryOfComputation.FiniteStateMachine.FSMConfig import FSMConfig, Alphabet, State
+from CORE_TheoryOfComputation.FiniteStateMachine.FiniteStateMachine import FiniteStateMachine, Alphabet, State
 
 
-class FSM(Generic[State, Alphabet]):
+class DFA(Generic[State, Alphabet]):
     """
-    An instance of this class is created to process an input with a given state machine.
-    It tracks the state as input is processed.
+    Behaves as a Deterministic Finite Automata given a state machine config
     """
-    __machine: FSMConfig[State, Alphabet, None]  # The machine that governs our behaviour
+    __machine: FiniteStateMachine[State, Alphabet, None]  # The machine that governs our behaviour
     __state: State  # The current state of this instance
 
-    def __init__(self, machine: FSMConfig[State, Alphabet, None]):
+    def __init__(self, machine: FiniteStateMachine[State, Alphabet, None]):
         self.__machine = machine;
         self.__state = machine.get_start_state()
 

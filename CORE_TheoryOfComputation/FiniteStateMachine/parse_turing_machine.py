@@ -1,6 +1,6 @@
 from typing import List, Optional, Dict, Tuple, Set
 
-from CORE_TheoryOfComputation.FiniteStateMachine.FSMConfig import FSMConfig
+from CORE_TheoryOfComputation.FiniteStateMachine.FiniteStateMachine import FiniteStateMachine
 from CORE_TheoryOfComputation.FiniteStateMachine.TuringMachine import Direction, TuringTransition
 
 
@@ -21,7 +21,7 @@ def get_alphabet_value(raw: str) -> Optional[str]:
     return raw if raw != "_" else None
 
 
-def parse_turing_machine(definition: List[str]) -> FSMConfig[str, str, TuringTransition]:
+def parse_turing_machine(definition: List[str]) -> FiniteStateMachine[str, str, TuringTransition]:
     """"
     This function parses Turing Machine Definitions from
     https://turingmachinesimulator.com/
@@ -98,11 +98,11 @@ def parse_turing_machine(definition: List[str]) -> FSMConfig[str, str, TuringTra
 
     # Build the Config with the global attributes
     # and accumulated knowledge of alphabet and states
-    fsm: FSMConfig = FSMConfig(
+    fsm: FiniteStateMachine = FiniteStateMachine(
         start_state=start_state,
         all_states=all_states,
         alphabet=alphabet,
-        is_deterministic=False,
+        is_complete=False,
         valid_end_states={accept}
     )
 

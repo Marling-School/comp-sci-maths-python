@@ -8,7 +8,7 @@ TransitionInfo = Tuple[State, Transition]
 TransitionsByInputChar = Dict[Alphabet, TransitionInfo]
 
 
-class FSMConfig(Generic[State, Alphabet, Transition]):
+class FiniteStateMachine(Generic[State, Alphabet, Transition]):
     """
     Encapsulates the rules of a given state machine. Once the rules are established
     machine runners can be created to process inputs.
@@ -20,7 +20,7 @@ class FSMConfig(Generic[State, Alphabet, Transition]):
     __all_states: Set[State]  # All the known states for the machine
     __valid_end_states: Set[State]  # All the valid end states for the machine
     __alphabet: Set[Alphabet]  # The set of know input characters
-    __is_deterministic: bool  # Indicates if the machine should be deterministic
+    __is_complete: bool  # Indicates if the machine should be complete
 
     # The registry of all the transition rules, keyed by start state, sub key by input char
     __transitions: Dict[State, TransitionsByInputChar]
@@ -29,7 +29,7 @@ class FSMConfig(Generic[State, Alphabet, Transition]):
                  start_state: State,
                  all_states: Set[State],
                  alphabet: Set[Alphabet],
-                 is_deterministic: bool,
+                 is_complete: bool,
                  valid_end_states=None):
         # Validate that the start state is within the known states
         if start_state not in all_states:
@@ -50,7 +50,7 @@ class FSMConfig(Generic[State, Alphabet, Transition]):
         self.__valid_end_states = valid_end_states
         self.__alphabet = alphabet
         self.__transitions = dict()
-        self.__is_deterministic = is_deterministic
+        self.__is_complete = is_complete
 
     def __repr__(self):
         transitions_str: str = ""
@@ -70,7 +70,7 @@ class FSMConfig(Generic[State, Alphabet, Transition]):
                         start_state: State,
                         input_char: Alphabet,
                         end_state: State,
-                        transition_info: Optional[Transition] = None) -> FSMConfig:
+                        transition_info: Optional[Transition] = None) -> FiniteStateMachine:
         """
         Register transition rules with this Finite State Machine.
         All of the rules should be registered before runners are created and used.
@@ -151,7 +151,7 @@ class FSMConfig(Generic[State, Alphabet, Transition]):
 
         # Validate that we have transitions defined for this start state
         if start_state not in self.__transitions:
-            if self.__is_deterministic:
+            if self.__is_complete:
                 raise Exception("No transitions defined for {}".format(start_state))
             else:
                 return None
@@ -161,7 +161,7 @@ class FSMConfig(Generic[State, Alphabet, Transition]):
 
         # Validate that we have a transition rule defined for this specific input char
         if input_char not in transitions:
-            if self.__is_deterministic:
+            if self.__is_complete:
                 raise Exception("No transition defined for {} with character {}".format(
                     start_state,
                     input_char
