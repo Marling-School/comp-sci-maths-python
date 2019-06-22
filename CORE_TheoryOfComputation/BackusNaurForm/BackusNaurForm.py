@@ -1,9 +1,11 @@
 from __future__ import annotations
 from typing import List, Dict, Optional, Tuple
+from CORE_TheoryOfComputation.BackusNaurForm.Tree import Tree
 from CORE_Algorithms.Queue.QueueImpl import Queue, QueueImpl
 
 RulePart = Tuple[bool, str]
 Rule = List[RulePart]
+MatchPart = Tuple[str, str]
 
 
 GIVEN_BY: str = '::='
@@ -32,7 +34,8 @@ class BackusNaurForm:
                     as_str += "<{}>, ".format(value) if is_tag else "'{}',".format(value)
         return as_str
 
-    def __parse_alternative(self, alternative_str) -> Rule:
+    @staticmethod
+    def __parse_alternative(alternative_str) -> Rule:
         """
         Given one of the expressions within a definition, parses the components of the rule.
         :param alternative_str: The raw string
@@ -46,13 +49,16 @@ class BackusNaurForm:
         current_literal: str = ""
         for c in alternative_str:
             if c == "<":
-                # If we have any accumulated literal, just add as a literal part
-                if len(current_literal) > 0:
-                    form.append((False, current_literal))
-                    current_literal = ""
+                if is_building_literal:
+                    current_literal += c
+                else:
+                    # If we have any accumulated literal, just add as a literal part
+                    if len(current_literal) > 0:
+                        form.append((False, current_literal))
+                        current_literal = ""
 
-                # Register the fact we are building a tag
-                is_building_tag = True
+                    # Register the fact we are building a tag
+                    is_building_tag = True
             elif c == ">":
                 # If we aren't already building a tag, assume this close bracket is a literal
                 if not is_building_tag:
@@ -109,7 +115,7 @@ class BackusNaurForm:
 
         alternatives: List[Rule] = []
         for alternative_str in alternatives_str:
-            form: List[RulePart] = self.__parse_alternative(alternative_str)
+            form: List[RulePart] = BackusNaurForm.__parse_alternative(alternative_str)
             alternatives.append(form)
 
         self.__rules[rule_name] = alternatives
@@ -119,7 +125,8 @@ class BackusNaurForm:
                                         input_str: str,
                                         from_index: int,
                                         to_index: int,
-                                        rule_part: RulePart) -> bool:
+                                        rule_name: str,
+                                        rule_part: RulePart) -> Optional[Tree[MatchPart]]:
         """
         Given some portion of the input string, this function attempts to match that portion
         with a given Rule Part. The portion of string must entirely satisfy the rule part for
@@ -131,7 +138,7 @@ class BackusNaurForm:
         :param from_index: The index from which we are to try and match
         :param to_index: The index up to which we are trying to match
         :param rule_part: The rule part we are attempting to satisfy
-        :return: True if the required portion of the string matches the rule part
+        :return: A tree containing all the sub matches thus far, if the matches consume the string
         """
         is_tag, rule_value = rule_part
         if is_tag:
@@ -142,20 +149,24 @@ class BackusNaurForm:
 
             # Work through the alternatives, recursing into __check_value_against_rule
             for sub_rule in sub_rule_alternatives:
-                is_match: bool = self.__check_value_against_rule(input_str, from_index, to_index, sub_rule)
-                if is_match:
-                    return True
+                match: Optional[Tree[MatchPart]] = \
+                    self.__check_value_against_rule(input_str, from_index, to_index, rule_value, sub_rule)
+                if match is not None:
+                    return match
 
-        else:
-            return rule_value == input_str[from_index:to_index]
+        elif rule_value == input_str[from_index:to_index]:
+            return Tree((rule_name, input_str[from_index:to_index]))
 
-        return False
+        return None
 
     def __check_value_against_rule(self,
-                      input_str: str,
-                      from_index: int,
-                      to_index: int,
-                      rule: Rule) -> bool:
+                                   input_str: str,
+                                   from_index: int,
+                                   to_index: int,
+                                   rule_name: str,
+                                   rule: Rule) -> Optional[Tree[MatchPart]]:
+        potential_return: Tree[MatchPart] = Tree((rule_name, input_str[from_index:to_index]))
+
         """
         This function attempts to match a given portion of the input string against an entire rule.
         It must iterate through all the parts of the rule, greedily attempting matches.
@@ -183,8 +194,18 @@ class BackusNaurForm:
             # While there is any remaining string to try and match
             while temp_to_index > from_index and not match_found:
                 # Attempt a match at this rule part
-                match: bool = self.__check_value_against_rule_part(input_str, from_index, temp_to_index, rule_part)
-                if match:
+                match: Optional[Tree[MatchPart]] = \
+                    self.__check_value_against_rule_part(
+                        input_str,
+                        from_index,
+                        temp_to_index,
+                        rule_name,
+                        rule_part)
+                if match is not None:
+                    # If this is a sub tag rule part, add to the tree to return
+                    # Otherwise its a literal match, and the tree created in this function will already serve
+                    if rule_part[0]:
+                        potential_return.add_child(match)
                     # The next rule needs to match 'from' the end of the string we just matched against
                     from_index = temp_to_index
                     match_found = True
@@ -193,12 +214,12 @@ class BackusNaurForm:
                     temp_to_index -= 1
 
             if not match_found:
-                return False
+                return None
 
         # If we satisfied all the rule parts AND consumed the whole string, this is a match
-        return rule_part_q.is_empty() and from_index == to_index
+        return potential_return if rule_part_q.is_empty() and from_index == to_index else None
 
-    def find_match(self, input_str: str) -> Optional[str]:
+    def find_match(self, input_str: str) -> Optional[Tree[MatchPart]]:
         """
         Given an input string, this attempts to find a named BNF meta tag that matches.
 
@@ -207,6 +228,8 @@ class BackusNaurForm:
         """
         for name, alternative_rules in self.__rules.items():
             for rule in alternative_rules:
-                if self.__check_value_against_rule(input_str, 0, len(input_str), rule):
-                    return name
+                part: Optional[Tree[MatchPart]] = \
+                    self.__check_value_against_rule(input_str, 0, len(input_str), name, rule)
+                if part is not None:
+                    return part
         return None

@@ -1,6 +1,7 @@
 from unittest import TestCase
 from typing import Optional, List, Tuple
-from CORE_TheoryOfComputation.BackusNaurForm.BackusNaurForm import BackusNaurForm
+from CORE_TheoryOfComputation.BackusNaurForm.BackusNaurForm import BackusNaurForm, MatchPart
+from CORE_TheoryOfComputation.BackusNaurForm.Tree import Tree
 
 
 class TestBNF(TestCase):
@@ -18,8 +19,13 @@ class TestBNF(TestCase):
         ]
 
         for test_input, expected_output in test_cases:
-            actual_output: Optional[str] = bnf.find_match(test_input)
-            self.assertEqual(expected_output, actual_output)
+            actual_output: Optional[Tree[MatchPart]] = bnf.find_match(test_input)
+            if expected_output is not None:
+                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                self.assertIsNotNone(actual_output)
+                self.assertEqual(expected_output, actual_output.get_value()[0])
+            else:
+                self.assertIsNone(actual_output)
 
     def test_integer(self):
         bnf: BackusNaurForm = BackusNaurForm()\
@@ -36,7 +42,12 @@ class TestBNF(TestCase):
 
         for test_input, expected_output in test_cases:
             actual_output: Optional[str] = bnf.find_match(test_input)
-            self.assertEqual(expected_output, actual_output)
+            if expected_output is not None:
+                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                self.assertIsNotNone(actual_output)
+                self.assertEqual(expected_output, actual_output.get_value()[0])
+            else:
+                self.assertIsNone(actual_output)
 
     def test_real(self):
         bnf: BackusNaurForm = BackusNaurForm()\
@@ -55,7 +66,12 @@ class TestBNF(TestCase):
 
         for test_input, expected_output in test_cases:
             actual_output: Optional[str] = bnf.find_match(test_input)
-            self.assertEqual(expected_output, actual_output)
+            if expected_output is not None:
+                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                self.assertIsNotNone(actual_output)
+                self.assertEqual(expected_output, actual_output.get_value()[0])
+            else:
+                self.assertIsNone(actual_output)
 
     def test_expression(self):
         bnf: BackusNaurForm = BackusNaurForm()\
@@ -74,4 +90,31 @@ class TestBNF(TestCase):
 
         for test_input, expected_output in test_cases:
             actual_output: Optional[str] = bnf.find_match(test_input)
-            self.assertEqual(expected_output, actual_output)
+            if expected_output is not None:
+                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                self.assertIsNotNone(actual_output)
+                self.assertEqual(expected_output, actual_output.get_value()[0])
+            else:
+                self.assertIsNone(actual_output)
+
+    def test_html(self):
+        bnf: BackusNaurForm = BackusNaurForm()\
+            .add_rule("<tag_name> ::= html|head|body") \
+            .add_rule("<document> ::= 'STUFF' | '<'<tag_name>'>'<document>'</'<tag_name>'>'")
+        print("Test HTML: {}".format(bnf))
+
+        test_cases: List[Tuple[str, Optional[str]]] = [
+            ('html', 'tag_name'),
+            ('<html>STUFF</html>', 'document'),
+            ('<html><head>STUFF</head></html>', 'document'),
+        ]
+
+        for test_input, expected_output in test_cases:
+            actual_output: Optional[str] = bnf.find_match(test_input)
+            print("Input of {}, Output:\n{}".format(test_input, actual_output))
+            if expected_output is not None:
+                self.assertIsNotNone(actual_output)
+                self.assertEqual(expected_output, actual_output.get_value()[0])
+            else:
+                self.assertIsNone(actual_output)
+
