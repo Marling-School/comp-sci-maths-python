@@ -130,7 +130,7 @@ class BackusNaurForm:
         """
         Given some portion of the input string, this function attempts to match that portion
         with a given Rule Part. The portion of string must entirely satisfy the rule part for
-        this function to return True.
+        this function to return a tree.
         If the given rule part is a meta-tag, it recurses into __check_value_against_rule to check the string against
         that entire rule.
 
@@ -176,7 +176,7 @@ class BackusNaurForm:
         :param from_index: The index from which to check
         :param to_index: The end index to which we check
         :param rule: The rule we are trying to satisfy.
-        :return: True if the given portion of the input string entirely matches the rule
+        :return: A tree of the rule matches, if this rule has completely matched the string portion
         """
         # Build a Queue of Rule Parts to satisfy
         rule_part_q: Queue[RulePart] = QueueImpl()
