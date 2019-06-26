@@ -3,25 +3,7 @@ I took a list of english words from this:
 https://github.com/dwyl/english-words/blob/master/words_alpha.txt
 """
 from typing import List, Set, Optional, Tuple
-from CORE_DataRepresentation.VernamCaesarCipher.VernamCipher import VernamCipher, ALPHABET
-
-
-def generate_keys(length_limit: int,
-                  current: List = []) -> List[List[int]]:
-    """
-    Recursively generate all the possible keys for decrypting a vernam cipher
-    :param length_limit: The longest inputs to generate, gives us the exit condition for recursion
-    :param current: The current accumulated input
-    :return: The list of keys generated
-    """
-    keys: List[List[int]] = []
-    for a in range(len(ALPHABET)):
-        next_input: List[int] = list(current)
-        next_input.append(a)
-        keys.append(next_input)
-        if len(next_input) < length_limit:
-            keys.extend(generate_keys(length_limit, next_input))
-    return keys
+from CORE_DataRepresentation.Encryption.CaesarCipher import CaesarCipher, ALPHABET
 
 
 def get_words_set(filename: str) -> Set[str]:
@@ -38,7 +20,7 @@ def get_words_set(filename: str) -> Set[str]:
     return words
 
 
-def try_key(cipher_text: str, key: List[int], words: Set[str]) -> float:
+def try_key(cipher_text: str, key: int, words: Set[str]) -> float:
     """
     Given some cipher text and a key, it attempts to decrypt and analyse the
     generated plain text for likely success. It uses a dictionary of english words.
@@ -51,7 +33,7 @@ def try_key(cipher_text: str, key: List[int], words: Set[str]) -> float:
     :return: A score for how many words in the decrypted plain text match english words. Score from 0.0 to 1.0
     """
     # Run the decryption
-    cipher: VernamCipher = VernamCipher(key)
+    cipher: CaesarCipher = CaesarCipher(key)
     potential_plain_text: str = cipher.decrypt(cipher_text)
 
     # Keep track of matching words, and total words
@@ -70,8 +52,7 @@ def try_key(cipher_text: str, key: List[int], words: Set[str]) -> float:
 
 
 def crack_cipher(cipher_text: str,
-                 max_key_length: int,
-                 words_filename: str) -> Tuple[Optional[List[int]], float]:
+                 words_filename: str) -> Tuple[Optional[int], float]:
     """
     Attempt brute force decryption of vernam cipher.
 
@@ -84,11 +65,11 @@ def crack_cipher(cipher_text: str,
     words: Set[str] = get_words_set(words_filename)
 
     # Generate a list of keys
-    keys: List[List[int]] = generate_keys(max_key_length)
+    keys: List[int] = [x for x in range(len(ALPHABET))]
 
     # Keep track of the best score seen and it's corresponding key
     best_score: float = 0.0
-    best_key: Optional[List[int]] = None
+    best_key: Optional[int] = None
     for key in keys:
         score: float = try_key(cipher_text, key, words)
         # If every single word matched, just return immediately
