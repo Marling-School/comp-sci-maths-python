@@ -2,7 +2,7 @@ import time
 from typing import List
 
 from CORE_DataRepresentation.VernamCaesarCipher.VernamCipher import VernamCipher, generate_one_time_pad
-from CORE_DataRepresentation.VernamCaesarCipher.BreakVernamCipher import get_keys
+from CORE_DataRepresentation.VernamCaesarCipher.BreakVernamCipher import crack_cipher
 
 WORDS_FILENAME: str = 'words_alpha.txt'
 BENCHMARK_RESULTS_FILENAME = 'brute_force.csv'
@@ -20,7 +20,7 @@ with open(BENCHMARK_RESULTS_FILENAME, 'w') as f:
         # Do a timed run on brute force decryption
         print("Attempting brute force decryption for key length {}".format(key_length), end="...")
         start_time = time.process_time_ns()
-        found_key, score = get_keys(my_cipher_text, len(key), WORDS_FILENAME)
+        found_key, score = crack_cipher(my_cipher_text, len(key), WORDS_FILENAME)
         time_taken_ms: int = (time.process_time_ns() - start_time) // 1000000
         print("Done in {} ms".format(time_taken_ms))
 

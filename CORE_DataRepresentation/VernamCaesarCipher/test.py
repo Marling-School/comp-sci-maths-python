@@ -2,7 +2,7 @@ from typing import List
 from unittest import TestCase
 
 from CORE_DataRepresentation.VernamCaesarCipher.VernamCipher import VernamCipher, generate_one_time_pad
-from CORE_DataRepresentation.VernamCaesarCipher.BreakVernamCipher import get_keys
+from CORE_DataRepresentation.VernamCaesarCipher.BreakVernamCipher import crack_cipher
 
 WORDS_FILENAME: str = 'words_alpha.txt'
 
@@ -50,7 +50,7 @@ class Test(TestCase):
             my_cipher_text: str = my_cipher.encrypt(plain_text)
 
             # Attempt to find a key
-            found_key, score = get_keys(my_cipher_text, len(key), WORDS_FILENAME)
+            found_key, score = crack_cipher(my_cipher_text, len(key), WORDS_FILENAME)
 
             # Try to decrypt with that found key
             my_found_cipher: VernamCipher = VernamCipher(found_key)

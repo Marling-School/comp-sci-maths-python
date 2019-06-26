@@ -2,25 +2,26 @@
 I took a list of english words from this:
 https://github.com/dwyl/english-words/blob/master/words_alpha.txt
 """
-from typing import List, Set, Optional, Callable, Tuple
+from typing import List, Set, Optional, Tuple
 from CORE_DataRepresentation.VernamCaesarCipher.VernamCipher import VernamCipher, ALPHABET
 
 
-def generate_keys(callback: Callable[[List[int]], None],
-                  length_limit: int,
-                  current: List = []) -> None:
+def generate_keys(length_limit: int,
+                  current: List = []) -> List[List[int]]:
     """
     Recursively generate all the possible keys for decrypting a vernam cipher
-    :param callback: Called with all the inputs as they are generated
     :param length_limit: The longest inputs to generate, gives us the exit condition for recursion
     :param current: The current accumulated input
+    :return: The list of keys generated
     """
+    keys = List[List[int]] = []
     for a in range(len(ALPHABET)):
         next_input: List[int] = list(current)
         next_input.append(a)
-        callback(next_input)
+        keys.append(next_input)
         if len(next_input) < length_limit:
-            generate_keys(callback, length_limit, next_input)
+            keys.extend(generate_keys(length_limit, next_input))
+    return keys
 
 
 def get_words_set(filename: str) -> Set[str]:
@@ -68,9 +69,9 @@ def try_key(cipher_text: str, key: List[int], words: Set[str]) -> float:
     return hit_rate
 
 
-def get_keys(cipher_text: str,
-             max_key_length: int,
-             words_filename: str) -> Tuple[Optional[List[int]], float]:
+def crack_cipher(cipher_text: str,
+                 max_key_length: int,
+                 words_filename: str) -> Tuple[Optional[List[int]], float]:
     """
     Attempt brute force decryption of vernam cipher.
 
@@ -79,11 +80,11 @@ def get_keys(cipher_text: str,
     :param words_filename: The filename of words to use in the analysis
     :return: the most likely key, given matches against dictionary words
     """
+    # Read in all the english words
     words: Set[str] = get_words_set(words_filename)
-    keys: List[List[int]] = []
 
-    # Generates all the possible keys, passing in the append function as the callback
-    generate_keys(keys.append, max_key_length)
+    # Generate a list of keys
+    keys: List[List[int]] = generate_keys(max_key_length)
 
     # Keep track of the best score seen and it's corresponding key
     best_score: float = 0.0
