@@ -14,7 +14,7 @@ def generate_keys(length_limit: int,
     :param current: The current accumulated input
     :return: The list of keys generated
     """
-    keys = List[List[int]] = []
+    keys: List[List[int]] = []
     for a in range(len(ALPHABET)):
         next_input: List[int] = list(current)
         next_input.append(a)
