@@ -3,7 +3,7 @@ from unittest import TestCase
 
 from CORE_DataRepresentation.Encryption.VernamCipher import VernamCipher, generate_one_time_pad
 from CORE_DataRepresentation.Encryption.CaesarCipher import CaesarCipher
-from CORE_DataRepresentation.Encryption.BreakCaesarCipher import crack_cipher
+from CORE_DataRepresentation.Encryption.crack_caesar import crack_cipher
 
 WORDS_FILENAME: str = 'words_alpha.txt'
 
