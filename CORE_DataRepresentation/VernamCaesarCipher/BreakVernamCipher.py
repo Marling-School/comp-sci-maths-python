@@ -3,7 +3,7 @@ I took a list of english words from this:
 https://github.com/dwyl/english-words/blob/master/words_alpha.txt
 """
 from typing import List, Set, Optional, Callable, Tuple
-from CORE_DataRepresentation.VernamCipher import VernamCipher, ALPHABET
+from CORE_DataRepresentation.VernamCaesarCipher.VernamCipher import VernamCipher, ALPHABET
 
 
 def generate_keys(callback: Callable[[List[int]], None],

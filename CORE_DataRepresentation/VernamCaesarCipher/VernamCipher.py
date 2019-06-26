@@ -51,23 +51,35 @@ class VernamCipher:
         :param direction: Indicates if we are decrypting or encrypting
         :return:
         """
+        # Keep track of the output chars
         output_chars: List[str] = []
+
+        # Iterate through the key, rotate to the start when we reach its end
         key_index = 0
 
+        # Convert message to lowercase, then iterate through each character
         for p in message.lower():
-            key_this_char: int = self.__one_time_pad[key_index] % 26
+            # Lookup the key
+            key_this_char: int = self.__one_time_pad[key_index]
             try:
+                # Find the index of the given character
                 index: int = ALPHABET.index(p)
+
+                # Move it on by the key, and make sure we rotate around the end and start
                 index += len(ALPHABET)
                 index += (direction.value * key_this_char)
                 index %= len(ALPHABET)
+
+                # Write the ALPHABET character at the shifted index to the output
                 output_chars.append(ALPHABET[index])
 
             except ValueError:
+                # If the character is not in the alphabet, just shove it as-is into the output
                 output_chars.append(p)
 
             key_index = (key_index + 1) % len(self.__one_time_pad)
 
+        # Build the output string from the chars
         return "".join(output_chars)
 
     def encrypt(self, plain_text: str) -> str:

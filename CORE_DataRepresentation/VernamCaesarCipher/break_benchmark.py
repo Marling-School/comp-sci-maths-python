@@ -1,8 +1,8 @@
 import time
-from typing import List, Optional
+from typing import List
 
-from CORE_DataRepresentation.VernamCipher import VernamCipher, generate_one_time_pad
-from CORE_DataRepresentation.BreakVernamCipher import get_keys
+from CORE_DataRepresentation.VernamCaesarCipher.VernamCipher import VernamCipher, generate_one_time_pad
+from CORE_DataRepresentation.VernamCaesarCipher.BreakVernamCipher import get_keys
 
 WORDS_FILENAME: str = 'words_alpha.txt'
 BENCHMARK_RESULTS_FILENAME = 'brute_force.csv'
