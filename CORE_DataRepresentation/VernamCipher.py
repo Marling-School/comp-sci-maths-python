@@ -1,4 +1,11 @@
 from typing import List
+from random import randint
+
+ALPHABET: List[str] = [chr(x) for x in range(ord('a'), ord('z'))]
+
+
+def generate_one_time_pad(length: int) -> List[int]:
+    return [randint(0, len(ALPHABET)) for _ in range(length)]
 
 
 class VernamCipher:
@@ -20,18 +27,16 @@ class VernamCipher:
 
         for p in message.lower():
             key_this_char: int = self.__one_time_pad[key_index] % 26
-            if 'a' <= p <= 'z':
-                c_ord: int = (ord(p) + (direction * key_this_char))
-                if c_ord > ord('z'):
-                    c_ord -= 26
-                if c_ord < ord('a'):
-                    c_ord += 26
-                c: str = chr(c_ord)
-                output_chars.append(c)
-                # print("Processing {} in dir {} with key [{}] {} to make {}-{}".format(
-                #     p, direction, key_index, key_this_char, c_ord, c))
-            else:
+            try:
+                index: int = ALPHABET.index(p)
+                index += len(ALPHABET)
+                index += (direction * key_this_char)
+                index %= len(ALPHABET)
+                output_chars.append(ALPHABET[index])
+
+            except ValueError:
                 output_chars.append(p)
+
             key_index = (key_index + 1) % len(self.__one_time_pad)
 
         return "".join(output_chars)

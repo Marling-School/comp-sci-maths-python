@@ -27,5 +27,19 @@ class TestStringMethods(unittest.TestCase):
             traverse.traverse(my_tree, lambda x: print(x, end=", "))
             print("")
 
+    def test_contains(self):
+        my_tree: BinaryTree[str] = BinaryTree(str_is_to_left)
+
+        my_tree.add('B')
+        my_tree.add('A')
+        my_tree.add('D')
+        my_tree.add('E')
+        my_tree.add('C')
+        my_tree.add('F')
+
+        positive: bool = my_tree.contains('C')
+        negative: bool = my_tree.contains('X')
+        self.assertTrue(positive)
+        self.assertFalse(negative)
 
 

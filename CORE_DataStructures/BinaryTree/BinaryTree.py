@@ -11,7 +11,9 @@ class BinaryTree(Generic[T]):
     left_branch: BinaryTree[T] or None
     right_branch: BinaryTree[T] or None
 
-    def __init__(self, is_to_left: Callable[[T, T], bool], value: T = None):
+    def __init__(self,
+                 is_to_left: Callable[[T, T], bool] = lambda a, b: a < b,
+                 value: T = None):
         self.is_to_left = is_to_left
         self.value = value
         self.left_branch = None
@@ -20,7 +22,17 @@ class BinaryTree(Generic[T]):
     def __repr__(self):
         return "({} {} {})".format(self.left_branch, self.value, self.right_branch)
 
-    def add(self, item: T):
+    def contains(self, item: T) -> bool:
+        if self.value == item:
+            return True
+        elif self.left_branch is not None and self.left_branch.contains(item):
+            return True
+        elif self.right_branch is not None and self.right_branch.contains(item):
+            return True
+        else:
+            return False
+
+    def add(self, item: T) -> None:
         if self.value is None:
             self.value = item
         elif self.is_to_left(item, self.value):
