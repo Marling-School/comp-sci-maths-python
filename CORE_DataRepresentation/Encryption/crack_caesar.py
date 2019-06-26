@@ -3,7 +3,8 @@ I took a list of english words from this:
 https://github.com/dwyl/english-words/blob/master/words_alpha.txt
 """
 from typing import List, Set, Optional, Tuple
-from CORE_DataRepresentation.Encryption.CaesarCipher import CaesarCipher, ALPHABET
+from CORE_DataRepresentation.Encryption.CaesarCipher import CaesarCipher
+from CORE_DataRepresentation.Encryption.rotate_substitution import ALPHABET
 
 
 def get_words_set(filename: str) -> Set[str]:

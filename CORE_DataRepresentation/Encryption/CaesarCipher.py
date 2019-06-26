@@ -1,6 +1,6 @@
 from typing import List
 from CORE_DataRepresentation.Encryption.rotate_substitution import \
-    process_character, ALPHABET, Direction
+    process_character, Direction
 
 
 class CaesarCipher:

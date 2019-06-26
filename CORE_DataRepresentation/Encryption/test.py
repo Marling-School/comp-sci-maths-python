@@ -52,7 +52,7 @@ class Test(TestCase):
             # Does the recovered plain text match the given plain text?
             self.assertEqual(plain_text.lower(), recovered_plain_text)
 
-    def test_one_time_pad(self):
+    def test_vernam_cipher(self):
         self.__test_vernam_cipher(generate_one_time_pad(60),
                                   ["hello",
                                    "it was the best of times, it was the worst of times"])
