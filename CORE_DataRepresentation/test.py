@@ -1,4 +1,4 @@
-from typing import List, Optional, Set
+from typing import List
 from unittest import TestCase
 
 from CORE_DataRepresentation.VernamCipher import VernamCipher, generate_one_time_pad
@@ -10,28 +10,26 @@ WORDS_FILENAME: str = 'words_alpha.txt'
 class Test(TestCase):
 
     def __test_encrypt_decrypt(self, key: List[int], test_cases: List[str]):
+        """
+        General form of tests that encrypt and decrypt some data.
+        This test checks that the decryption successfully recovers the data.
+        :param key: The key to use
+        :param test_cases: A list of strings to encrypt and decrypt
+        :return:
+        """
         my_cipher: VernamCipher = VernamCipher(key)
         for plain_text in test_cases:
             cipher_text: str = my_cipher.encrypt(plain_text)
             recovered_plain_text: str = my_cipher.decrypt(cipher_text)
-            print("{} with key {} becomes {} then back to {}".format(
-                plain_text,
-                key,
-                cipher_text,
-                recovered_plain_text))
             self.assertEqual(plain_text.lower(), recovered_plain_text)
 
     def test_caesar(self):
-        self.__test_encrypt_decrypt([5], ['hello'])
-        self.__test_encrypt_decrypt([15], ['goodbye'])
+        self.__test_encrypt_decrypt([5], ["hello"])
+        self.__test_encrypt_decrypt([15], ["there once was a fellow called hank"])
 
     def test_one_time_pad(self):
-        self.__test_encrypt_decrypt(generate_one_time_pad(10), ["hello"])
-
-    def test_word_set(self):
-        words: Set[str] = get_words_set(WORDS_FILENAME)
-        self.assertTrue('hello' in words)
-        self.assertFalse('asdfasfafsdf' in words)
+        self.__test_encrypt_decrypt(generate_one_time_pad(10),
+                                    ["hello", "it was the best of times, it was the worst of times"])
 
     def __test_break_vernam(self, key: List[int], test_cases: List[str]):
         for plain_text in test_cases:
@@ -53,7 +51,7 @@ class Test(TestCase):
 
     def test_brute_force_vernam(self):
         self.__test_break_vernam([3, 6],
-                                 ['how now brown cow',
+                                 ['there once was a fellow called Fred',
                                   'the rain in spain falls mainly on the plain'
                                   ])
 
