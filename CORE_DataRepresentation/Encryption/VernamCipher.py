@@ -15,8 +15,7 @@ def generate_one_time_pad(length: int) -> List[int]:
 
 class VernamCipher:
     """
-    Encapsulates the vernam cipher. It can be used to run Caesar cipher if the key is
-    of length 1.
+    Encapsulates the vernam cipher.
     """
     # The encryption key
     __one_time_pad: List[int]
