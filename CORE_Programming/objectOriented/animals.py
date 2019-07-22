@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Animal(object):
+class Animal(ABC):
     def __init__(self, species):
         self.species = species
 
