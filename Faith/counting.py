@@ -16,3 +16,7 @@ makeMeAPie('Chicken and mushroom', 20)
 # procedure setInitialDifficulty(weight)
 # 	    difficulty = weight DIV 6
 # endprocedure
+
+me = name, age = 'joe', 36
+
+print(f'Name: {name}, Age: {age}, Me:{me}')
