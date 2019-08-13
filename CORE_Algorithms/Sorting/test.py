@@ -21,6 +21,20 @@ class TestSortFunctions(unittest.TestCase):
             self.assertEqual([1, 3, 4, 5, 8, 9], my_sorted_list)
             self.assertEqual([9, 8, 5, 4, 3, 1], my_reversed_list)
 
+    def test_empty_list(self):
+        for sort_function in self.__sort_functions:
+            my_list: List = []
+            sorted_list = sort_function(my_list, lambda x, y: x < y)
+            self.assertEqual([], sorted_list)
+
+    def test_mixed_types(self):
+        for sort_function in self.__sort_functions:
+            my_list: List = [1, 2, 'joe', 'foobar']
+            with self.assertRaises(Exception) as context:
+                sort_function(my_list, lambda x, y: x < y)
+
+            self.assertTrue('not supported between instances' in str(context.exception))
+
     def test_string(self):
         for sort_function in self.__sort_functions:
             my_list: List[str] = ["Bravo", "Delta", "Charlie", "Alpha", "Echo", "Sierra", "Foxtrot"]
