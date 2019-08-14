@@ -13,7 +13,7 @@ class Animal(ABC):
         pass
 
     def __str__(self):
-        return "Animal {}".format(self.species)
+        return f"Animal {self.species}"
 
     @staticmethod
     def do_something():
@@ -35,10 +35,6 @@ class Cat(Animal):
     def speak(self):
         print("Miaow")
 
-
-myAnimal = Animal('Rat')
-print(myAnimal)
-myAnimal.speak()
 
 myDog = Dog()
 print(myDog)
