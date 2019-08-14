@@ -1,5 +1,7 @@
 from unittest import TestCase
+from typing import List
 from CORE_SystematicApproach.factorial import factorial
+from CORE_SystematicApproach.reverse_list import reverse_list
 
 
 class TestFactorial(TestCase):
@@ -15,3 +17,13 @@ class TestFactorial(TestCase):
 
     def test_wrong_type(self):
         self.assertRaises(Exception, lambda _: factorial('a'))
+
+    def test_reverse_ints(self):
+        my_list: List = list(range(10))
+        my_reversed = reverse_list(my_list)
+        print(f'Input: {my_list}\nReversed: {my_reversed}')
+
+    def test_reverse_letters(self):
+        my_list: List = [chr(x) for x in range(ord('a'), ord('z') + 1)]
+        my_reversed = reverse_list(my_list)
+        print(f'Input: {my_list}\nReversed: {my_reversed}')
