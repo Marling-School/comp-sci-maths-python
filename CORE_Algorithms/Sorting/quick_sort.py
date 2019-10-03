@@ -3,7 +3,7 @@ from math import floor
 from CORE_Algorithms.Sorting.common import CompareFunction, Sortable
 
 
-def merge_sort(input_list: List[Sortable],
+def quick_sort(input_list: List[Sortable],
                comparator: CompareFunction) -> List[Sortable]:
     if len(input_list) == 0:
         return list(input_list)
@@ -14,10 +14,10 @@ def merge_sort(input_list: List[Sortable],
     Returns a copy of the list sorted, makes no changes to input list.
     This function delegates to the recursive form, initialising the left and right pointers.
     """
-    return merge_sort_recurse(input_list, comparator, 0, len(input_list) - 1)
+    return quick_sort_recurse(input_list, comparator, 0, len(input_list) - 1)
 
 
-def merge_sort_recurse(input_list: List[Sortable],
+def quick_sort_recurse(input_list: List[Sortable],
                        comparator: CompareFunction,
                        left_pointer: int,
                        right_pointer: int) -> List[Sortable]:
@@ -32,8 +32,8 @@ def merge_sort_recurse(input_list: List[Sortable],
     middle: int = floor((left_pointer + right_pointer) / 2)
 
     # Recurse sort both halves to yield two lists to merge
-    first_half: List[Sortable] = merge_sort_recurse(input_list, comparator, left_pointer, middle)
-    second_half: List[Sortable] = merge_sort_recurse(input_list, comparator, middle + 1, right_pointer)
+    first_half: List[Sortable] = quick_sort_recurse(input_list, comparator, left_pointer, middle)
+    second_half: List[Sortable] = quick_sort_recurse(input_list, comparator, middle + 1, right_pointer)
 
     # Merge the two halves into a single sorted list
     output_list: List[Sortable] = []
