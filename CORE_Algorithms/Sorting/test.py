@@ -4,13 +4,12 @@ from random import randint
 from CORE_Algorithms.Sorting.bubble_sort import bubble_sort
 from CORE_Algorithms.Sorting.merge_sort import merge_sort
 from CORE_Algorithms.Sorting.insertion_sort import insertion_sort
-from CORE_Algorithms.Sorting.quick_sort import quick_sort
 from CORE_Algorithms.Sorting.common import SortFunction, primitive_compare, primitive_reverse_compare
 from CORE_Algorithms.Sorting.Person import Person, compare_name, compare_age
 
 
 class TestSortFunctions(unittest.TestCase):
-    __sort_functions: List[SortFunction] = [quick_sort, insertion_sort, bubble_sort, merge_sort]
+    __sort_functions: List[SortFunction] = [insertion_sort, bubble_sort, merge_sort]
 
     def test_numbers(self):
         for sort_function in self.__sort_functions:
