@@ -3,6 +3,7 @@ from math import floor
 from CORE_Algorithms.Sorting.common import CompareFunction, Sortable
 
 
+#TODO This is just the merge sort, need to actually write the quick sort
 def quick_sort(input_list: List[Sortable],
                comparator: CompareFunction) -> List[Sortable]:
     if len(input_list) == 0:

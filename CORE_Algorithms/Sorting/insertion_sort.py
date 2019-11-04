@@ -12,10 +12,13 @@ def insertion_sort(input_list: List[Sortable],
     output_list: List[Sortable] = list(input_list)
 
     for index in range(1, len(output_list)):
-        for workBackwards in range(index, 0, -1):
-            lower: int = workBackwards - 1
-            upper: int = workBackwards
-            comparison: int = comparator(output_list[lower], output_list[upper])
+        item_to_place: Sortable = output_list[index]
+        item_place: int = index
+
+        while item_place > 0:
+            lower: int = item_place - 1
+            upper: int = item_place
+            comparison: int = comparator(output_list[lower], item_to_place)
 
             # The comparator returns -1 if the first item is 'greater than' the second one
             if comparison < 0:
@@ -23,5 +26,12 @@ def insertion_sort(input_list: List[Sortable],
                 swap: Sortable = output_list[lower]
                 output_list[lower] = output_list[upper]
                 output_list[upper] = swap
+            else:
+                # Item to place can be placed early
+                item_place = upper
+                break
+            item_place -= 1
+
+        output_list[item_place] = item_to_place
 
     return output_list
