@@ -88,7 +88,8 @@ class TestFiniteStateMachines(unittest.TestCase):
         ]
         for an_input, expected_output in test_cases:
             an_output: List[str] = []
-            machine: MealyMachine = MealyMachine(fsm, lambda x: an_output.append(x))
+            machine: MealyMachine = MealyMachine(
+                fsm, lambda x: an_output.append(x))
             machine.process(an_input)
             an_output_str: str = "".join(an_output)
             print("{} -> {}".format(an_input, an_output_str))
@@ -123,8 +124,10 @@ class TestFiniteStateMachines(unittest.TestCase):
         for an_input, expected_output in test_cases:
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
-            an_output, is_valid, num_steps = machine.process(callback=lambda x: print(x))
-            an_output_str: str = "".join([c for c in an_output if c is not None])
+            an_output, is_valid, num_steps = machine.process(
+                callback=lambda x: print(x))
+            an_output_str: str = "".join(
+                [c for c in an_output if c is not None])
             print("Test Input {}, expected {}, received ({}, {}), steps: {}".format(
                 an_input, expected_output, an_output_str, is_valid, num_steps
             ))
@@ -160,8 +163,10 @@ class TestFiniteStateMachines(unittest.TestCase):
         for an_input, expected_output in test_cases:
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
-            an_output, is_valid, num_steps = machine.process(callback=lambda x: print(x))
-            an_output_str: str = "".join([c for c in an_output if c is not None])
+            an_output, is_valid, num_steps = machine.process(
+                callback=lambda x: print(x))
+            an_output_str: str = "".join(
+                [c for c in an_output if c is not None])
             print("Test Input {}, expected {}, received ({}, {}), steps: {}".format(
                 an_input, expected_output, an_output_str, is_valid, num_steps
             ))
@@ -169,7 +174,7 @@ class TestFiniteStateMachines(unittest.TestCase):
 
     def test_turing_machine_parsed_dec_to_bin(self):
         fsm: Optional[FiniteStateMachine] = None
-        with open("./turing_machines/decimal_to_binary.txt") as f:
+        with open("./TheoryOfComputation/FiniteStateMachine/turing_machines/decimal_to_binary.txt") as f:
             fsm = parse_turing_machine(list(f))
 
         print("Turing Machine to Convert Decimal to Binary")
@@ -180,8 +185,10 @@ class TestFiniteStateMachines(unittest.TestCase):
         for an_input, expect_accepted, expected_output in test_cases:
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
-            an_output, is_accepted, num_steps = machine.process(callback=lambda x: print(x))
-            an_output_str: str = "".join([c for c in an_output if c is not None])
+            an_output, is_accepted, num_steps = machine.process(
+                callback=lambda x: print(x))
+            an_output_str: str = "".join(
+                [c for c in an_output if c is not None])
             print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
                 an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
             ))
@@ -191,7 +198,7 @@ class TestFiniteStateMachines(unittest.TestCase):
 
     def test_turing_machine_parsed_duplicate_mirror(self):
         fsm: Optional[FiniteStateMachine] = None
-        with open("./turing_machines/duplicate_binary_string.txt") as f:
+        with open("./TheoryOfComputation/FiniteStateMachine/turing_machines/duplicate_binary_string.txt") as f:
             fsm = parse_turing_machine(list(f))
 
         print("Turing Machine to Duplicate a Binary String (mirror)")
@@ -202,8 +209,10 @@ class TestFiniteStateMachines(unittest.TestCase):
         for an_input, expect_accepted, expected_output in test_cases:
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
-            an_output, is_accepted, num_steps = machine.process(callback=lambda x: print(x))
-            an_output_str: str = "".join([c for c in an_output if c is not None])
+            an_output, is_accepted, num_steps = machine.process(
+                callback=lambda x: print(x))
+            an_output_str: str = "".join(
+                [c for c in an_output if c is not None])
             print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
                 an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
             ))
@@ -213,7 +222,7 @@ class TestFiniteStateMachines(unittest.TestCase):
 
     def test_turing_machine_parsed_binary_palindrome(self):
         fsm: Optional[FiniteStateMachine] = None
-        with open("./turing_machines/binary_palindrome.txt") as f:
+        with open("./TheoryOfComputation/FiniteStateMachine/turing_machines/binary_palindrome.txt") as f:
             fsm = parse_turing_machine(list(f))
 
         print("Turing Machine to Duplicate a Binary String (mirror)")
@@ -225,8 +234,10 @@ class TestFiniteStateMachines(unittest.TestCase):
         for an_input, expect_accepted, expected_output in test_cases:
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
-            an_output, is_accepted, num_steps = machine.process(callback=lambda x: print(x))
-            an_output_str: str = "".join([c for c in an_output if c is not None])
+            an_output, is_accepted, num_steps = machine.process(
+                callback=lambda x: print(x))
+            an_output_str: str = "".join(
+                [c for c in an_output if c is not None])
             print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
                 an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
             ))

@@ -1,12 +1,13 @@
 from unittest import TestCase
-from SystematicApproach.decomposition.stickers \
+from ProgrammingConcepts.decomposition.stickers \
     import harvest_duplicates, assign_duplicates, swap
 
 
 class MyTest(TestCase):
 
     def test_harvest_duplicates(self):
-        my_collection = ['red', 'green', 'red', 'red', 'blue', 'violet', 'blue']
+        my_collection = ['red', 'green', 'red',
+                         'red', 'blue', 'violet', 'blue']
         deduped, swaps = harvest_duplicates(my_collection)
         print(f"Deduped {deduped}")
         print(f"Swaps: {swaps}")
@@ -16,15 +17,18 @@ class MyTest(TestCase):
 
     def test_assign_duplicates(self):
         my_collection = ['red', 'green', 'indigo']
-        all_duplicates = ['indigo', 'blue', 'violet', 'violet', 'blue', 'yellow', 'indigo']
+        all_duplicates = ['indigo', 'blue', 'violet',
+                          'violet', 'blue', 'yellow', 'indigo']
 
-        upd_collection, upd_duplicates = assign_duplicates(my_collection, all_duplicates)
+        upd_collection, upd_duplicates = assign_duplicates(
+            my_collection, all_duplicates)
         print(f"My Collection: {my_collection}")
         print(f"All Duplicates: {all_duplicates}")
         print(f"Updated Collection: {upd_collection}")
         print(f"Updated Duplicates: {upd_duplicates}")
 
-        self.assertEqual({'red', 'green', 'indigo', 'violet', 'blue', 'yellow'}, set(upd_collection))
+        self.assertEqual({'red', 'green', 'indigo', 'violet',
+                          'blue', 'yellow'}, set(upd_collection))
         self.assertEqual(2, upd_duplicates.count('indigo'))
         self.assertEqual(1, upd_duplicates.count('blue'))
         self.assertEqual(1, upd_duplicates.count('violet'))

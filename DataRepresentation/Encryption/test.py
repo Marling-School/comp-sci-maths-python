@@ -5,7 +5,7 @@ from DataRepresentation.Encryption.VernamCipher import VernamCipher, generate_on
 from DataRepresentation.Encryption.CaesarCipher import CaesarCipher
 from DataRepresentation.Encryption.crack_caesar import crack_cipher
 
-WORDS_FILENAME: str = 'words_alpha.txt'
+WORDS_FILENAME: str = './DataRepresentation/Encryption/words_alpha.txt'
 
 
 class Test(TestCase):
@@ -96,4 +96,3 @@ class Test(TestCase):
                                  ['by the power of grey skull',
                                   'how many beans make five?'
                                   ])
-

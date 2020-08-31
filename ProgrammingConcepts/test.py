@@ -1,7 +1,7 @@
 from unittest import TestCase
 from typing import List
-from SystematicApproach.factorial import factorial
-from SystematicApproach.reverse_list import reverse_list
+from ProgrammingConcepts.factorial import factorial
+from ProgrammingConcepts.reverse_list import reverse_list
 
 
 class TestFactorial(TestCase):
