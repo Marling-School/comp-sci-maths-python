@@ -36,12 +36,12 @@ class TestStringMethods(unittest.TestCase):
         logging.info("Depth First Search on {}".format(self.my_graph))
         dfs: List[str] = self.my_graph.depth_first_search('S')
         for v in dfs:
-            logging.info(v, end=", ")
+            logging.info(v)  # , end=", "
         logging.info("")
 
     def test_bfs(self):
         logging.info("Breadth First Search on {}".format(self.my_graph))
         bfs: List[str] = self.my_graph.breadth_first_search('S')
         for v in bfs:
-            logging.info(v, end=", ")
+            logging.info(v)  # , end=", "
         logging.info("")

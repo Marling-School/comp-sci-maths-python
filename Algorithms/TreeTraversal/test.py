@@ -34,7 +34,7 @@ class TestBinaryTree(unittest.TestCase):
         copy_tree: BinaryTree[str] = BinaryTreeImpl(str_compare)
         for v in self.__my_tree.pre_order():
             copy_tree.add(v)
-            logging.info(v, end=", ")
+            logging.info(v)  # , end=", "
         logging.info("")
 
         logging.info("Pre-Order should create identical copies")
@@ -52,7 +52,7 @@ class TestBinaryTree(unittest.TestCase):
             if last is not None:
                 self.assertTrue(last < v)
                 order_checked += 1
-            logging.info(v, end=", ")
+            logging.info(v)  # , end=", "
             last = v
         logging.info("")
         # Make sure we did actually compare values
@@ -62,5 +62,5 @@ class TestBinaryTree(unittest.TestCase):
         logging.info("Post Order Test")
         traversed: List[str] = self.__my_tree.post_order()
         for v in traversed:
-            logging.info(v, end=", ")
+            logging.info(v)  # , end=", "
         logging.info("")
