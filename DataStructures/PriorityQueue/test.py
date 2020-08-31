@@ -1,4 +1,5 @@
 import unittest
+import logging
 from DataStructures.PriorityQueue.PriorityQueue import PriorityQueue
 
 
@@ -25,7 +26,7 @@ class TestStringMethods(unittest.TestCase):
         g = my_queue.dequeue()
         h = my_queue.dequeue()
 
-        print("My Priority Queue: {}".format(my_queue))
+        logging.info("My Priority Queue: {}".format(my_queue))
 
         self.assertEqual(a, ('Indigo', 10))
         self.assertEqual(b, ('Tom', 9))
@@ -35,7 +36,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(f, ('Louise', 8))
         self.assertEqual(g, ('Chris', 7))
         self.assertEqual(h, ('Nina', 4))
-        print("Tested Priority Queue {}".format(my_queue))
+        logging.info("Tested Priority Queue {}".format(my_queue))
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 import unittest
+import logging
 from DataStructures.BinaryTree.BinaryTree \
     import TraverseInOrder, TraversePostOrder, TraversePreOrder, BinaryTree
 
@@ -19,13 +20,13 @@ class TestStringMethods(unittest.TestCase):
         my_tree.add('C')
         my_tree.add('F')
 
-        print("My Binary Tree:{}".format(my_tree))
+        logging.info("My Binary Tree:{}".format(my_tree))
 
         for t in [TraversePreOrder, TraverseInOrder, TraversePostOrder]:
             traverse: t[str] = t()
-            print("Traversing {}".format(traverse.get_name()))
-            traverse.traverse(my_tree, lambda x: print(x, end=", "))
-            print("")
+            logging.info("Traversing {}".format(traverse.get_name()))
+            traverse.traverse(my_tree, lambda x: logging.info(x, end=", "))
+            logging.info("")
 
     def test_contains(self):
         my_tree: BinaryTree[str] = BinaryTree(str_is_to_left)
@@ -41,5 +42,3 @@ class TestStringMethods(unittest.TestCase):
         negative: bool = my_tree.contains('X')
         self.assertTrue(positive)
         self.assertFalse(negative)
-
-

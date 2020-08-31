@@ -1,4 +1,5 @@
 from unittest import TestCase
+import logging
 from DataRepresentation.DictionaryEncoding.dictionary_encode import \
     dictionary_encode, dictionary_decode
 
@@ -9,13 +10,13 @@ class TestDictionaryEncode(TestCase):
             text = f.read()
             encoded = dictionary_encode(text)
             decoded = dictionary_decode(encoded)
-            print("Text: {}".format(text))
+            logging.info("Text: {}".format(text))
             encoded_dict, encoded_str = encoded
-            print("Encoded Dictionary")
-            print("\n".join(["{}: {}".format(k, v)
-                             for k, v in encoded_dict.items()]))
-            print("Encoded String: {}".format(encoded_str))
-            print("Decoded: {}".format(decoded))
+            logging.info("Encoded Dictionary")
+            logging.info("\n".join(["{}: {}".format(k, v)
+                                    for k, v in encoded_dict.items()]))
+            logging.info("Encoded String: {}".format(encoded_str))
+            logging.info("Decoded: {}".format(decoded))
             self.assertEqual(text, decoded)
 
     def test_2(self):
@@ -23,11 +24,11 @@ class TestDictionaryEncode(TestCase):
             text = f.read()
             encoded = dictionary_encode(text)
             decoded = dictionary_decode(encoded)
-            print("Text: {}".format(text))
+            logging.info("Text: {}".format(text))
             encoded_dict, encoded_str = encoded
-            print("Encoded Dictionary")
-            print("\n".join(["{}: {}".format(k, v)
-                             for k, v in encoded_dict.items()]))
-            print("Encoded String: {}".format(encoded_str))
-            print("Decoded: {}".format(decoded))
+            logging.info("Encoded Dictionary")
+            logging.info("\n".join(["{}: {}".format(k, v)
+                                    for k, v in encoded_dict.items()]))
+            logging.info("Encoded String: {}".format(encoded_str))
+            logging.info("Decoded: {}".format(decoded))
             self.assertEqual(text, decoded)

@@ -1,4 +1,5 @@
 import unittest
+import logging
 from typing import List, Optional
 from random import randint
 from Algorithms.Sorting.bubble_sort import bubble_sort
@@ -20,7 +21,7 @@ class TestSortFunctions(unittest.TestCase):
             my_reversed_list: List[int] = sort_function(
                 my_list, primitive_reverse_compare)
 
-            print("Integers: {}\nInput: {}\nSorted: {}\nReversed: {}".format(
+            logging.info("Integers: {}\nInput: {}\nSorted: {}\nReversed: {}".format(
                 sort_function.__name__, my_list, my_sorted_list, my_reversed_list))
             self.assertEqual([1, 3, 4, 5, 8, 9], my_sorted_list)
             self.assertEqual([9, 8, 5, 4, 3, 1], my_reversed_list)
@@ -48,7 +49,7 @@ class TestSortFunctions(unittest.TestCase):
                 my_list, primitive_compare)
             my_reversed_list: List[str] = sort_function(
                 my_list, primitive_reverse_compare)
-            print("Strings: {}\nInput: {}\nSorted: {}\nReversed: {}".format(
+            logging.info("Strings: {}\nInput: {}\nSorted: {}\nReversed: {}".format(
                 sort_function.__name__, my_list, my_sorted_list, my_reversed_list))
             self.assertEqual(
                 ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Sierra"],
@@ -63,7 +64,7 @@ class TestSortFunctions(unittest.TestCase):
             my_sorted_list: List[int] = sort_function(
                 my_list, primitive_compare)
 
-            print("Random Numbers: {}\nInput: {}\nSorted: {}".format(
+            logging.info("Random Numbers: {}\nInput: {}\nSorted: {}".format(
                 sort_function.__name__, my_list, my_sorted_list))
 
             last: Optional[int] = None
@@ -90,7 +91,7 @@ class TestSortFunctions(unittest.TestCase):
             by_name_names = [x.get_name() for x in by_name]
             by_age_names = [x.get_name() for x in by_age]
 
-            print("Objects: {}\nInput: {}\nBy Name: {}\nBy Age: {}".format(
+            logging.info("Objects: {}\nInput: {}\nBy Name: {}\nBy Age: {}".format(
                 sort_function.__name__, my_list, by_name, by_age))
             self.assertEqual(["Bilbo", "Frodo", "Gollum",
                               "Sam", "Sauron"], by_name_names)

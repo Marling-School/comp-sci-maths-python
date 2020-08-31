@@ -1,4 +1,5 @@
 import unittest
+import logging
 from DataStructures.LinkedList.LinkedList import LinkedList
 
 
@@ -22,17 +23,17 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(at2, 'Indigo')
         self.assertEqual(at3, 'Kate')
         self.assertEqual(at4, 'Kirsten')
-        print("Tested Linked List {}".format(my_list))
+        logging.info("Tested Linked List {}".format(my_list))
 
         remove2: bool = my_list.remove(2)
         self.assertTrue(remove2)
         at2_again: str = my_list.get(2)
-        print("Tested Linked List after Remove {}".format(my_list))
+        logging.info("Tested Linked List after Remove {}".format(my_list))
         self.assertEqual(at2_again, 'Kate')
 
-        print("Iterating Items")
+        logging.info("Iterating Items")
         for x, index in my_list:
-            print("{}: {}".format(index, x))
+            logging.info("{}: {}".format(index, x))
 
 
 if __name__ == '__main__':

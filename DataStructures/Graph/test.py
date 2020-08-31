@@ -1,4 +1,5 @@
 import unittest
+import logging
 from DataStructures.Graph.WeightedGraph import WeightedGraph
 
 
@@ -9,20 +10,21 @@ class TestStringMethods(unittest.TestCase):
         my_graph.add_relationship('J', 'K', 5)
         my_graph.add_relationship('J', 'T', 3)
         my_graph.add_relationship('T', 'I', 7)
-        print("My Graph:{}".format(my_graph))
+        logging.info("My Graph:{}".format(my_graph))
         my_adj_matrix = my_graph.generate_adjacency_matrix()
-        print("Adjacency Matrix", my_adj_matrix)
+        logging.info("Adjacency Matrix", my_adj_matrix)
 
         known_items = my_graph.get_known_items()
-        print("-", end="\t")
+        logging.info("-", end="\t")
         for heading in known_items:
-            print("{}".format(heading), end="\t")
-        print("|")
+            logging.info("{}".format(heading), end="\t")
+        logging.info("|")
         for outer_index, outer in enumerate(known_items):
-            print("{}".format(outer), end="\t")
+            logging.info("{}".format(outer), end="\t")
             for inner_index, inner in enumerate(known_items):
-                print("{}".format(my_adj_matrix[outer_index][inner_index]), end="\t")
-            print("|")
+                logging.info("{}".format(
+                    my_adj_matrix[outer_index][inner_index]), end="\t")
+            logging.info("|")
 
         j_k: float = my_graph.get_relationship_weight('J', 'K')
         self.assertEqual(5.0, j_k)

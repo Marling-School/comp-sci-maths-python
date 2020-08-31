@@ -1,4 +1,5 @@
 import unittest
+import logging
 from typing import List, Tuple, Dict
 from Algorithms.ArithmeticExpression.ArithmeticExpression import ArithmeticExpression
 from Algorithms.ReversePolishNotation.ReversePolishNotation import ReversePolishNotation
@@ -11,8 +12,9 @@ class TestArithmeticExpression(unittest.TestCase):
                        cases: List[Tuple[Dict[str, float], float]]):
         for e in expressions:
             my_expression: ArithmeticExpression = ArithmeticExpression(e)
-            print("My Expression: {}".format(my_expression))
-            rpn: ReversePolishNotation = ReversePolishNotation(my_expression.postfix())
+            logging.info("My Expression: {}".format(my_expression))
+            rpn: ReversePolishNotation = ReversePolishNotation(
+                my_expression.postfix())
 
             for inputs, expected in cases:
                 ans1: float = rpn.evaluate(inputs)

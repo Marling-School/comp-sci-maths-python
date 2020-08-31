@@ -1,4 +1,5 @@
 import unittest
+import logging
 from Algorithms.Stack.Stack import Stack
 from Algorithms.Stack.StackImpl import StackImpl
 
@@ -36,7 +37,8 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(f, 28)
         self.assertEqual(g, 19)
         self.assertEqual(h, 21)
-        print("Tested Stack {}".format(my_stack))
+        logging.info("Tested Stack {}".format(my_stack))
+
 
 if __name__ == '__main__':
     unittest.main()

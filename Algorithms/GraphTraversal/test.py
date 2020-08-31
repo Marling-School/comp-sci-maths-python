@@ -1,4 +1,5 @@
 import unittest
+import logging
 from typing import Set, List
 from Algorithms.GraphTraversal.Graph import Graph
 from Algorithms.GraphTraversal.GraphImpl import GraphImpl
@@ -20,7 +21,7 @@ class TestStringMethods(unittest.TestCase):
         self.my_graph.add_edge('F', 'G')
 
     def test_graph(self):
-        print("My Graph: {}".format(self.my_graph))
+        logging.info("My Graph: {}".format(self.my_graph))
         s_edges: Set[str] = self.my_graph.get_related('S')
         self.assertTrue('A' in s_edges)
         self.assertTrue('B' in s_edges)
@@ -32,15 +33,15 @@ class TestStringMethods(unittest.TestCase):
         self.assertFalse('B' in g_edges)
 
     def test_dfs(self):
-        print("Depth First Search on {}".format(self.my_graph))
+        logging.info("Depth First Search on {}".format(self.my_graph))
         dfs: List[str] = self.my_graph.depth_first_search('S')
         for v in dfs:
-            print(v, end=", ")
-        print("")
+            logging.info(v, end=", ")
+        logging.info("")
 
     def test_bfs(self):
-        print("Breadth First Search on {}".format(self.my_graph))
+        logging.info("Breadth First Search on {}".format(self.my_graph))
         bfs: List[str] = self.my_graph.breadth_first_search('S')
         for v in bfs:
-            print(v, end=", ")
-        print("")
+            logging.info(v, end=", ")
+        logging.info("")

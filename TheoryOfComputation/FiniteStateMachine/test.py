@@ -1,4 +1,5 @@
 import unittest
+import logging
 from typing import List, Set, Tuple, Optional
 from TheoryOfComputation.FiniteStateMachine.FiniteStateMachine import FiniteStateMachine
 from TheoryOfComputation.FiniteStateMachine.DFA import DFA
@@ -62,7 +63,7 @@ class TestFiniteStateMachines(unittest.TestCase):
         for my_input in my_inputs:
             machine: DFA = DFA(fsm)
             is_valid: bool = machine.process(my_input)
-            print("Input {}, valid? {}".format(my_input, is_valid))
+            logging.info("Input {}, valid? {}".format(my_input, is_valid))
 
     def test_mealy_machine_1(self):
         # Build the Finite State Machine using rules
@@ -80,7 +81,7 @@ class TestFiniteStateMachines(unittest.TestCase):
             .with_transition("s2", "0", "s2", "0")\
             .with_transition("s2", "1", "s1", "0")
 
-        print("Mealy Machine DFA: {}".format(fsm))
+        logging.info("Mealy Machine DFA: {}".format(fsm))
 
         test_cases: List[Tuple[str, str]] = [
             ("00110", "00011"),
@@ -92,9 +93,9 @@ class TestFiniteStateMachines(unittest.TestCase):
                 fsm, lambda x: an_output.append(x))
             machine.process(an_input)
             an_output_str: str = "".join(an_output)
-            print("{} -> {}".format(an_input, an_output_str))
+            logging.info("{} -> {}".format(an_input, an_output_str))
             self.assertEqual(expected_output, an_output_str)
-        print("Done")
+        logging.info("Done")
 
     def test_turing_machine_1(self):
         """
@@ -114,7 +115,7 @@ class TestFiniteStateMachines(unittest.TestCase):
             .with_transition("q1", "1", "q1", ("1", Direction.MOVE_RIGHT))\
             .with_transition("q0", None, "qAccept", (None, Direction.NO_MOVE))
 
-        print("Turing Machine to Check Even Number of Zeros")
+        logging.info("Turing Machine to Check Even Number of Zeros")
         test_cases: List[Tuple[str, bool]] = [
             ("0001", False),
             ("00001", True),
@@ -125,10 +126,10 @@ class TestFiniteStateMachines(unittest.TestCase):
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
             an_output, is_valid, num_steps = machine.process(
-                callback=lambda x: print(x))
+                callback=lambda x: logging.info(x))
             an_output_str: str = "".join(
                 [c for c in an_output if c is not None])
-            print("Test Input {}, expected {}, received ({}, {}), steps: {}".format(
+            logging.info("Test Input {}, expected {}, received ({}, {}), steps: {}".format(
                 an_input, expected_output, an_output_str, is_valid, num_steps
             ))
             self.assertEqual(expected_output, is_valid)
@@ -153,7 +154,7 @@ class TestFiniteStateMachines(unittest.TestCase):
             .with_transition("q2", "1", "q2", ("1", Direction.MOVE_RIGHT))\
             .with_transition("q0", None, "qAccept", (None, Direction.NO_MOVE))
 
-        print("Turing Machine to Check Number Divisible By 3")
+        logging.info("Turing Machine to Check Number Divisible By 3")
         test_cases: List[Tuple[str, bool]] = [
             ("001", False),
             ("011", True),
@@ -164,10 +165,10 @@ class TestFiniteStateMachines(unittest.TestCase):
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
             an_output, is_valid, num_steps = machine.process(
-                callback=lambda x: print(x))
+                callback=lambda x: logging.info(x))
             an_output_str: str = "".join(
                 [c for c in an_output if c is not None])
-            print("Test Input {}, expected {}, received ({}, {}), steps: {}".format(
+            logging.info("Test Input {}, expected {}, received ({}, {}), steps: {}".format(
                 an_input, expected_output, an_output_str, is_valid, num_steps
             ))
             self.assertEqual(expected_output, is_valid)
@@ -177,8 +178,8 @@ class TestFiniteStateMachines(unittest.TestCase):
         with open("./TheoryOfComputation/FiniteStateMachine/turing_machines/decimal_to_binary.txt") as f:
             fsm = parse_turing_machine(list(f))
 
-        print("Turing Machine to Convert Decimal to Binary")
-        print(fsm)
+        logging.info("Turing Machine to Convert Decimal to Binary")
+        logging.info(fsm)
         test_cases: List[Tuple[str, bool, str]] = [
             ("45", True, "101101"),
         ]
@@ -186,10 +187,10 @@ class TestFiniteStateMachines(unittest.TestCase):
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
             an_output, is_accepted, num_steps = machine.process(
-                callback=lambda x: print(x))
+                callback=lambda x: logging.info(x))
             an_output_str: str = "".join(
                 [c for c in an_output if c is not None])
-            print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
+            logging.info("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
                 an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
             ))
             self.assertEqual(expect_accepted, is_accepted)
@@ -201,8 +202,8 @@ class TestFiniteStateMachines(unittest.TestCase):
         with open("./TheoryOfComputation/FiniteStateMachine/turing_machines/duplicate_binary_string.txt") as f:
             fsm = parse_turing_machine(list(f))
 
-        print("Turing Machine to Duplicate a Binary String (mirror)")
-        print(fsm)
+        logging.info("Turing Machine to Duplicate a Binary String (mirror)")
+        logging.info(fsm)
         test_cases: List[Tuple[str, bool, str]] = [
             ("01001", True, "0100110010"),
         ]
@@ -210,10 +211,10 @@ class TestFiniteStateMachines(unittest.TestCase):
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
             an_output, is_accepted, num_steps = machine.process(
-                callback=lambda x: print(x))
+                callback=lambda x: logging.info(x))
             an_output_str: str = "".join(
                 [c for c in an_output if c is not None])
-            print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
+            logging.info("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
                 an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
             ))
             self.assertEqual(expect_accepted, is_accepted)
@@ -225,8 +226,8 @@ class TestFiniteStateMachines(unittest.TestCase):
         with open("./TheoryOfComputation/FiniteStateMachine/turing_machines/binary_palindrome.txt") as f:
             fsm = parse_turing_machine(list(f))
 
-        print("Turing Machine to Duplicate a Binary String (mirror)")
-        print(fsm)
+        logging.info("Turing Machine to Duplicate a Binary String (mirror)")
+        logging.info(fsm)
         test_cases: List[Tuple[str, bool, str]] = [
             ("01001", False, ""),
             ("10011001", True, ""),
@@ -235,10 +236,10 @@ class TestFiniteStateMachines(unittest.TestCase):
             an_input_list = [c for c in an_input]
             machine: TuringMachine = TuringMachine(fsm, an_input_list)
             an_output, is_accepted, num_steps = machine.process(
-                callback=lambda x: print(x))
+                callback=lambda x: logging.info(x))
             an_output_str: str = "".join(
                 [c for c in an_output if c is not None])
-            print("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
+            logging.info("Test Input {}, expected ({}, {}), received ({}, {}), steps: {}".format(
                 an_input, expected_output, expect_accepted, an_output_str, is_accepted, num_steps
             ))
             self.assertEqual(expect_accepted, is_accepted)

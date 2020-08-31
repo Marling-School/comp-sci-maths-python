@@ -1,4 +1,5 @@
 from unittest import TestCase
+import logging
 from ProgrammingConcepts.decomposition.stickers \
     import harvest_duplicates, assign_duplicates, swap
 
@@ -9,8 +10,8 @@ class MyTest(TestCase):
         my_collection = ['red', 'green', 'red',
                          'red', 'blue', 'violet', 'blue']
         deduped, swaps = harvest_duplicates(my_collection)
-        print(f"Deduped {deduped}")
-        print(f"Swaps: {swaps}")
+        logging.info(f"Deduped {deduped}")
+        logging.info(f"Swaps: {swaps}")
         self.assertEqual({'red', 'green', 'blue', 'violet'}, set(deduped))
         self.assertEqual(2, swaps.count('red'))
         self.assertEqual(1, swaps.count('blue'))
@@ -22,10 +23,10 @@ class MyTest(TestCase):
 
         upd_collection, upd_duplicates = assign_duplicates(
             my_collection, all_duplicates)
-        print(f"My Collection: {my_collection}")
-        print(f"All Duplicates: {all_duplicates}")
-        print(f"Updated Collection: {upd_collection}")
-        print(f"Updated Duplicates: {upd_duplicates}")
+        logging.info(f"My Collection: {my_collection}")
+        logging.info(f"All Duplicates: {all_duplicates}")
+        logging.info(f"Updated Collection: {upd_collection}")
+        logging.info(f"Updated Duplicates: {upd_duplicates}")
 
         self.assertEqual({'red', 'green', 'indigo', 'violet',
                           'blue', 'yellow'}, set(upd_collection))
@@ -49,9 +50,9 @@ class MyTest(TestCase):
         for upd_collection in upd_collections:
             self.assertEqual(album, set(upd_collection))
 
-        print("Input Collections:")
+        logging.info("Input Collections:")
         for c in my_collections:
-            print(f"\t{c}")
-        print("Swapped Collections:")
+            logging.info(f"\t{c}")
+        logging.info("Swapped Collections:")
         for c in upd_collections:
-            print(f"\t{c}")
+            logging.info(f"\t{c}")

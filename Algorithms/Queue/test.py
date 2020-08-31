@@ -1,4 +1,5 @@
 import unittest
+import logging
 from Algorithms.Queue.Queue import Queue
 from Algorithms.Queue.QueueImpl import QueueImpl
 
@@ -34,7 +35,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(f, 2)
         self.assertEqual(g, 6)
         self.assertEqual(h, 19)
-        print("Tested Queue {}".format(my_queue))
+        logging.info("Tested Queue {}".format(my_queue))
 
 
 if __name__ == '__main__':

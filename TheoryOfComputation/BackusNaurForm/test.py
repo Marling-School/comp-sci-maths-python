@@ -1,4 +1,5 @@
 from unittest import TestCase
+import logging
 from typing import Optional, List, Tuple
 from TheoryOfComputation.BackusNaurForm.BackusNaurForm import BackusNaurForm, MatchPart
 from TheoryOfComputation.BackusNaurForm.Tree import Tree
@@ -9,8 +10,7 @@ class TestBNF(TestCase):
     def test_digit(self):
         bnf: BackusNaurForm = BackusNaurForm()\
             .add_rule("<digit> ::= 0|1|2|3|4|5|6|7|8|9")
-        print("Test Digit: {}".format(bnf))
-
+        logging.info("Test Digit: {}".format(bnf))
         test_cases: List[Tuple[str, Optional[str]]] = [
             ('6', 'digit'),
             ('458', None),
@@ -19,9 +19,11 @@ class TestBNF(TestCase):
         ]
 
         for test_input, expected_output in test_cases:
-            actual_output: Optional[Tree[MatchPart]] = bnf.find_match(test_input)
+            actual_output: Optional[Tree[MatchPart]
+                                    ] = bnf.find_match(test_input)
             if expected_output is not None:
-                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                logging.info("Input of {}, Output:\n{}".format(
+                    test_input, actual_output))
                 self.assertIsNotNone(actual_output)
                 self.assertEqual(expected_output, actual_output.get_value()[0])
             else:
@@ -31,7 +33,7 @@ class TestBNF(TestCase):
         bnf: BackusNaurForm = BackusNaurForm()\
             .add_rule("<digit> ::= 0|1|2|3|4|5|6|7|8|9")\
             .add_rule("<integer> ::= <digit> | <digit><integer>")
-        print("Test Integer: {}".format(bnf))
+        logging.info("Test Integer: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
             ('6', 'digit'),
@@ -43,7 +45,8 @@ class TestBNF(TestCase):
         for test_input, expected_output in test_cases:
             actual_output: Optional[str] = bnf.find_match(test_input)
             if expected_output is not None:
-                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                logging.info("Input of {}, Output:\n{}".format(
+                    test_input, actual_output))
                 self.assertIsNotNone(actual_output)
                 self.assertEqual(expected_output, actual_output.get_value()[0])
             else:
@@ -54,7 +57,7 @@ class TestBNF(TestCase):
             .add_rule("<digit> ::= 0|1|2|3|4|5|6|7|8|9")\
             .add_rule("<integer> ::= <digit> | <digit><integer>")\
             .add_rule("<real> ::= <integer> | <integer>'.'<integer>")
-        print("Test Real: {}".format(bnf))
+        logging.info("Test Real: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
             ('6', 'digit'),
@@ -67,7 +70,8 @@ class TestBNF(TestCase):
         for test_input, expected_output in test_cases:
             actual_output: Optional[str] = bnf.find_match(test_input)
             if expected_output is not None:
-                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                logging.info("Input of {}, Output:\n{}".format(
+                    test_input, actual_output))
                 self.assertIsNotNone(actual_output)
                 self.assertEqual(expected_output, actual_output.get_value()[0])
             else:
@@ -79,7 +83,7 @@ class TestBNF(TestCase):
             .add_rule("<integer> ::= <digit> | <digit><integer>")\
             .add_rule("<compare>::= < | > | <= | >= | == | !=")\
             .add_rule("<bool>::= <integer> <compare> <integer>")
-        print("Test Expression: {}".format(bnf))
+        logging.info("Test Expression: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
             ('<', 'compare'),
@@ -91,7 +95,8 @@ class TestBNF(TestCase):
         for test_input, expected_output in test_cases:
             actual_output: Optional[str] = bnf.find_match(test_input)
             if expected_output is not None:
-                print("Input of {}, Output:\n{}".format(test_input, actual_output))
+                logging.info("Input of {}, Output:\n{}".format(
+                    test_input, actual_output))
                 self.assertIsNotNone(actual_output)
                 self.assertEqual(expected_output, actual_output.get_value()[0])
             else:
@@ -101,7 +106,7 @@ class TestBNF(TestCase):
         bnf: BackusNaurForm = BackusNaurForm()\
             .add_rule("<tag_name> ::= html|head|body") \
             .add_rule("<document> ::= 'STUFF' | '<'<tag_name>'>'<document>'</'<tag_name>'>'")
-        print("Test HTML: {}".format(bnf))
+        logging.info("Test HTML: {}".format(bnf))
 
         test_cases: List[Tuple[str, Optional[str]]] = [
             ('html', 'tag_name'),
@@ -111,10 +116,10 @@ class TestBNF(TestCase):
 
         for test_input, expected_output in test_cases:
             actual_output: Optional[str] = bnf.find_match(test_input)
-            print("Input of {}, Output:\n{}".format(test_input, actual_output))
+            logging.info("Input of {}, Output:\n{}".format(
+                test_input, actual_output))
             if expected_output is not None:
                 self.assertIsNotNone(actual_output)
                 self.assertEqual(expected_output, actual_output.get_value()[0])
             else:
                 self.assertIsNone(actual_output)
-

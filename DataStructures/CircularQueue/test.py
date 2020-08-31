@@ -1,4 +1,5 @@
 import unittest
+import logging
 from DataStructures.CircularQueue.CircularQueue import CircularQueue
 
 
@@ -33,7 +34,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(f, 2)
         self.assertEqual(g, 6)
         self.assertEqual(h, 19)
-        print("Tested Circular Queue {}".format(my_queue))
+        logging.info("Tested Circular Queue {}".format(my_queue))
 
 
 if __name__ == '__main__':

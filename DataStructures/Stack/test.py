@@ -1,4 +1,5 @@
 import unittest
+import logging
 from DataStructures.Stack.Stack import Stack
 
 
@@ -35,7 +36,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(f, 28)
         self.assertEqual(g, 19)
         self.assertEqual(h, 21)
-        print("Tested Stack {}".format(my_stack))
+        logging.info("Tested Stack {}".format(my_stack))
 
 
 if __name__ == '__main__':
