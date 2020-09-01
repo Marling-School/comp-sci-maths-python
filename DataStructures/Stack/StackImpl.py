@@ -1,6 +1,6 @@
 from typing import TypeVar, List
 
-from Algorithms.Stack.Stack import Stack
+from DataStructures.Stack.Stack import Stack
 
 T = TypeVar('T')
 

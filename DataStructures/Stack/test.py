@@ -1,12 +1,13 @@
 import unittest
 import logging
 from DataStructures.Stack.Stack import Stack
+from DataStructures.Stack.StackImpl import StackImpl
 
 
 class TestStringMethods(unittest.TestCase):
 
     def test_stack(self):
-        my_stack: Stack[int] = Stack(5)
+        my_stack: Stack[int] = StackImpl()
         is_empty_at_start: bool = my_stack.is_empty()
         my_stack.push(5)
         my_stack.push(7)

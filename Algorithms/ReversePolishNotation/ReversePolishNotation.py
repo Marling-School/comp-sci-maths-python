@@ -1,5 +1,5 @@
 from typing import Dict, Callable
-from Algorithms.Stack.StackImpl import Stack, StackImpl
+from DataStructures.Stack.StackImpl import Stack, StackImpl
 
 """
 A lookup table for arithmetic operators supported by this class

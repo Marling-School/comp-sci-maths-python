@@ -19,7 +19,7 @@ class WeightedGraph(Generic[T]):
         if vertex not in self.__flat:
             self.__flat.append(vertex)
 
-    def add_relationship(self, from_v: T, to_v: T, weight: float):
+    def add_relationship(self, from_v: T, to_v: T, weight: float = 1.0):
         self.__ensure_key_exists(from_v)
         self.__ensure_key_exists(to_v)
 

@@ -3,8 +3,8 @@ from typing import TypeVar, Dict, Set, List, Iterable, Iterator
 from Algorithms.GraphTraversal.Graph import Graph
 from Algorithms.Queue.Queue import Queue
 from Algorithms.Queue.QueueImpl import QueueImpl
-from Algorithms.Stack.Stack import Stack
-from Algorithms.Stack.StackImpl import StackImpl
+from DataStructures.Stack.Stack import Stack
+from DataStructures.Stack.StackImpl import StackImpl
 
 T = TypeVar('T', str, int, float)
 

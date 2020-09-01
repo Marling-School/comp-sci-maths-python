@@ -1,7 +1,9 @@
 import unittest
 import logging
 from typing import Set, List
+from Algorithms.GraphTraversal.depth_first_search import depth_first_search
 from Algorithms.GraphTraversal.Graph import Graph
+from DataStructures.Graph.WeightedGraph import WeightedGraph, T
 from Algorithms.GraphTraversal.GraphImpl import GraphImpl
 
 
@@ -19,6 +21,21 @@ class TestStringMethods(unittest.TestCase):
         self.my_graph.add_edge('E', 'G')
         self.my_graph.add_edge('C', 'F')
         self.my_graph.add_edge('F', 'G')
+
+    def test_depth_first_search(self):
+        graph: WeightedGraph[str] = WeightedGraph()
+        graph.add_relationship('S', 'A')
+        graph.add_relationship('S', 'B')
+        graph.add_relationship('S', 'C')
+        graph.add_relationship('A', 'D')
+        graph.add_relationship('D', 'G')
+        graph.add_relationship('B', 'E')
+        graph.add_relationship('E', 'G')
+        graph.add_relationship('C', 'F')
+        graph.add_relationship('F', 'G')
+
+        items: List[T] = depth_first_search(graph, 'S')
+        logging.info('Depth First Search {}'.format(items))
 
     def test_graph(self):
         logging.info("My Graph: {}".format(self.my_graph))
